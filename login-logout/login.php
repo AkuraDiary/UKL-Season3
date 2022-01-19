@@ -12,7 +12,7 @@ if(isset($_SESSION['username'])){
 <center>
     <h1>Silahkan Login</h1>
             <hr />
-<form action="proseslogin.php" method="POST">
+<form action="../login-logout/proseslogin.php" method="POST">
     <table>
         <tr>
             <td>Username :</td>

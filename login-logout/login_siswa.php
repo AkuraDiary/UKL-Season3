@@ -42,7 +42,7 @@ if(isset($_POST['login'])){
         </tr>
         <tr>
             <td colspan="2"><center>Apakah anda seorang petugas? login 
-                                    <a href="login.php">disini</a>
+                                    <a href="../login-logout/login.php">disini</a>
                             </center>
             </td>
         </tr>
