@@ -1,5 +1,6 @@
 <?php
 require_once("../misc/require.php");
+require "../utils/connect.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +28,7 @@ require_once("../misc/require.php");
 <?php
 // Kita Konfigurasi Pagging disini
 $totalDataHalaman = 5;
-$data = mysqli_query($db, "SELECT * FROM siswa");
+$data = mysqli_query($connect, "SELECT * FROM siswa");
 $hitung = mysqli_num_rows($data);
 $totalHalaman = ceil($hitung / $totalDataHalaman);
 $halAktif = (isset($_GET['hal'])) ? $_GET['hal'] : 1;
@@ -35,7 +36,7 @@ $dataAwal = ($totalDataHalaman * $halAktif) - $totalDataHalaman;
 // Konfigurasi Selesai
 // Kita panggil tabel siswa
 // Setelah kita panggil, JOIN tabel yang ter relasi ke tabel siswa
-$sql = mysqli_query($db, "SELECT * FROM siswa
+$sql = mysqli_query($connect, "SELECT * FROM siswa
 JOIN kelas ON siswa.id_kelas = kelas.id_kelas
 ORDER BY nama LIMIT $dataAwal, $totalDataHalaman ");
 $no = 1;
@@ -59,14 +60,14 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
 <?php endfor; ?>
 <!-- Selesai -->
     <hr />
-    <?php require_once("footer.php"); ?>
+    <?php require_once("../misc/footer.php"); ?>
 </body>
 </html>
 <?php
 // Tombol Hapus ditekan
 if(isset($_GET['hapus'])){
     $nisn = $_GET['nisn'];
-    $hapus = mysqli_query($db, "DELETE FROM siswa WHERE nisn='$nisn'");
+    $hapus = mysqli_query($connect, "DELETE FROM siswa WHERE nisn='$nisn'");
     if($hapus){
         header("location: siswa.php");
     }else{

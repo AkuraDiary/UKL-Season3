@@ -3,7 +3,7 @@ session_start();
 require "./utils/connect.php";
 // Jika sesi dari login belum dibuat maka akan kita kembalikan ke halaman login
 if(!isset($_SESSION['username'])){
-    header("location: ../login-logout/login.php");
+    header("location: ./login-logout/login.php");
 }else{
     // Jika sudah dibuatkan sesi maka akan kita masukkan kedalam variabel
     $username = $_SESSION['username'];

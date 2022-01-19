@@ -1,7 +1,8 @@
 <?php
 require_once("../misc/require.php");
+require "../utils/connect.php";
 $id = $_GET['id'];
-$kelas = mysqli_query($db, "SELECT * FROM kelas WHERE id_kelas='$id'");
+$kelas = mysqli_query($connect, "SELECT * FROM kelas WHERE id_kelas='$id'");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +36,7 @@ while($row = mysqli_fetch_assoc($kelas)){?>
 <?php } ?>
 <hr />
     <!-- Panggil footer -->
-    <?php require("footer.php"); ?>
+    <?php require("./misc/footer.php"); ?>
 </body>
 </html>
 <?php
@@ -44,7 +45,7 @@ if(isset($_POST['simpan'])){
     $id = $_POST['id'];
     $nama = $_POST['nama'];
     $kk = $_POST['kk'];
-    $update = mysqli_query($db, "UPDATE kelas SET nama_kelas='$nama', kompetensi_keahlian='$kk'
+    $update = mysqli_query($connect, "UPDATE kelas SET nama_kelas='$nama', kompetensi_keahlian='$kk'
                                  WHERE kelas.id_kelas='$id'");
         if($update){
             header("location: kelas.php");
