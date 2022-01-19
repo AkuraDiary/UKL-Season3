@@ -11,7 +11,7 @@ $siswa = mysqli_query($db, "SELECT * FROM siswa WHERE nisn='$nisnSiswa'");
 </head>
 <body>
     <!-- Panggil header -->
-    <?php require("header.php"); ?>
+    <?php require("../misc/header.php"); ?>
     <!-- Konten -->
     <h3>Edit data Siswa</h3>
 <?php

@@ -9,7 +9,7 @@ require_once("../misc/require.php");
 </head>
 <body>
     <!-- Panggil script header -->
-    <?php require_once("header.php"); ?>
+    <?php require_once("../misc/header.php"); ?>
     <!-- Isi Konten -->
     <h3>Transaksi</h3>
     <p><a href="tambah_transaksi.php">Tambah Data</a></p>

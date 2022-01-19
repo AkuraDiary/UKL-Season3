@@ -11,7 +11,7 @@ $petugas = mysqli_query($db, "SELECT * FROM petugas WHERE id_petugas='$id'");
 </head>
 <body>
     <!-- Panggil header -->
-    <?php require("header.php"); ?>
+    <?php require("../misc/header.php"); ?>
     <!-- Konten -->
     <h3>Edit data Petugas</h3>
 <?php

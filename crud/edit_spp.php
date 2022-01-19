@@ -11,7 +11,7 @@ $spp = mysqli_query($db, "SELECT * FROM spp WHERE id_spp='$id'");
 </head>
 <body>
     <!-- Panggil header -->
-    <?php require("header.php"); ?>
+    <?php require("../misc/header.php"); ?>
     <!-- Konten -->
     <h3>Edit data SPP</h3>
 <?php
