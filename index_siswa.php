@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("connect.php");
+require_once("../utils/connect.php");
 // Jika sesi dari login belum dibuat maka akan kita kembalikan ke halaman login
 if(!isset($_SESSION['nisn'])){
     header("location: login_siswa.php");

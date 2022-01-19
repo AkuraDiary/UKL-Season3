@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("connect.php");
+require_once("c../utils/onnect.php");
 // Jika sesi dari login belum dibuat maka akan kita kembalikan ke halaman login
 if(!isset($_SESSION['username'])){
     header("location: login.php");
