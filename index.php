@@ -12,6 +12,7 @@ if(!isset($_SESSION['username'])){
 
 <html>
     <head>
+        <link rel="stylesheet" href="Styles/index.css">
         <title>Aplikasi Pembayaran SPP</title>
     </head>
 <body>
