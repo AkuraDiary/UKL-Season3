@@ -1,5 +1,5 @@
 <?php
-require_once("require.php");
+require_once("../misc/require.php");
 $id = $_GET['id'];
 $kelas = mysqli_query($db, "SELECT * FROM kelas WHERE id_kelas='$id'");
 ?>

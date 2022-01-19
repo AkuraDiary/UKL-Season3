@@ -1,5 +1,5 @@
 <?php
-require_once("require.php");
+require_once("../misc/require.php");
 $nisnSiswa = $_GET['nisn'];
 $siswa = mysqli_query($db, "SELECT * FROM siswa WHERE nisn='$nisnSiswa'");
 ?>

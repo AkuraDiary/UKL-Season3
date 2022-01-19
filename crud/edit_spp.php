@@ -1,5 +1,5 @@
 <?php
-require_once("require.php");
+require_once("../misc/require.php");
 $id = $_GET['id'];
 $spp = mysqli_query($db, "SELECT * FROM spp WHERE id_spp='$id'");
 ?>
