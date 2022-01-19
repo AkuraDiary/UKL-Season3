@@ -1,4 +1,3 @@
-<h1>Selamat datang di Aplikasi Pembayaran SPP</h1><hr />
 <!-- ADMIN DAPAT MENGAKSES SEMUANYA -->
 <html>
     <head>        
@@ -24,28 +23,28 @@
       if($hasil['level'] == "admin"){ 
       ?>
       <li class="nav-item active">
-        <a class="nav-link nav-link-active" href="/ukl_php_spp">Home</a>
+        <a class="nav-link nav-link-active" href="/mengukl/index.php">Home</a>
       </li>
       <li class="nav-item">        
-        <a class="nav-link" href="siswa.php">Data Siswa</a>
+        <a class="nav-link" href="/mengukl/crud/siswa.php">Data Siswa</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="petugas.php">Data Petugas</a> 
+        <a class="nav-link" href="/mengukl/crud/petugas.php">Data Petugas</a> 
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="kelas.php">Data Kelas</a>
+      <a class="nav-link" href="./crud/kelas.php">Data Kelas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="spp.php">Data SPP</a>
+        <a class="nav-link" href="./transaction/spp.php">Data SPP</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="transaksi.php">Transaksi</a>
+        <a class="nav-link" href="./transaction/transaksi.php">Transaksi</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="history.php">History Pembayaran</a>
+        <a class="nav-link" href="./misc/history.php">History Pembayaran</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link logout" href="logout.php">LogOut</a>
+        <a class="nav-link logout" href="./login-logout/logout.php">LogOut</a>
       </li>    
       <?php
         }else{ ?>
