@@ -21,6 +21,6 @@ if(!isset($_SESSION['username'])){
             <br />
 Silahkan dikelola dengan baik yaa :) 
             <hr />
-<?php require_once("footer.php"); ?>
+<?php require_once("./misc/footer.php"); ?>
 </body>
 </html>
