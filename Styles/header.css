@@ -21,11 +21,11 @@ nav a{
 nav{
     border-radius: 0 !important;
     color: #000;
-    background-color: #000 !important;
+    background-color: rgb(12, 3, 3) !important;
     transition: all .3s;
 }
 nav a:hover{
-    color: #FF5E14 !important;    
+    color: #14d0ff !important;    
     -webkit-transform: translateY(-3px);
     -moz-transform: translateY(-3px);
     -ms-transform: translateY(-3px);
@@ -36,11 +36,11 @@ nav a:hover{
     margin-left: 50px !important;
     margin-top: 7px !important;
     padding-right: 10px;
-    border-right: #FF5E14 solid 3px;
+    border-right: #14efff solid 3px;
     border-radius: 50%;
 }
 .navbar-brand:hover{
-    color: gold !important;
+    color: rgb(0, 238, 255) !important;
 }
 .logout:hover{
     color: red !important;
