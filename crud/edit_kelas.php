@@ -11,7 +11,7 @@ $kelas = mysqli_query($db, "SELECT * FROM kelas WHERE id_kelas='$id'");
 </head>
 <body>
     <!-- Panggil header -->
-    <?php require("header.php"); ?>
+    <?php require("../misc/header.php"); ?>
     <!-- Konten -->
     <h3>Edit data Kelas</h3>
 <?php

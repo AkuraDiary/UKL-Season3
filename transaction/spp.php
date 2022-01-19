@@ -9,10 +9,10 @@ require_once("../misc/require.php");
 </head>
 <body>
     <!-- Panggil script header -->
-    <?php require_once("header.php"); ?>
+    <?php require_once("../misc/header.php"); ?>
     <!-- Isi Konten -->
     <h3>SPP</h3>
-    <p><a href="tambah_spp.php">Tambah Data</a></p>
+    <p><a href="../crud/tambah_spp.php">Tambah Data</a></p>
     <table cellspacing="0" border="1" cellpadding="5">
         <tr>
             <td>No. </td>

@@ -9,7 +9,7 @@ require_once("../misc/require.php");
 </head>
 <body>
     <!-- Panggil header -->
-    <?php require_once("header.php"); ?>
+    <?php require_once("../misc/header.php"); ?>
     <!-- Konten -->
     <h3>History Pembayaran Siswa</h3>
     <form action="" method="POST" autocomplete="off">

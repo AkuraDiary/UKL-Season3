@@ -9,7 +9,7 @@ require_once("../misc/require.php");
 </head>
 <body>
     <!-- Panggil header -->
-    <?php require("header.php"); ?>
+    <?php require("../misc/header.php"); ?>
     <!-- Konten -->
     <h3>Tambah Kelas</h3>
     <form action="" method="POST">

@@ -31,7 +31,7 @@ ORDER BY tgl_bayar");
             <hr />
     <a href="#biodata">Biodata Kamu</a> | 
     <a href="#history">History Pembayaran</a> | 
-    <a href="logout.php">Logout</a>
+    <a href="./mengukl/login-logout/logout.php">Logout</a>
             <hr />
     <h2>>> Hallo, <?= $result['nama']; ?></h2>
     <h3>Biodata Kamu</h3>

@@ -8,7 +8,7 @@ require_once("../misc/require.php");
     <title>Tambah data transaksi</title>
 </head>
 <body>
-    <?php require("header.php"); ?>
+    <?php require("../misc/header.php"); ?>
     <h3>Tambah data transaksi</h3>
     <form action="" method="POST">
         <table cellpadding="5">
