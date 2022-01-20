@@ -94,7 +94,7 @@ body
 
 
 .impulse-wrap .bg, .impulse-wrap .overlay {
-    box-shadow: 0 20px 25px 0 /*rgba(18,17,30,.35);*/;
+    box-shadow: 0 20px 25px 0 rgba(18,17,30,.35);
 }
 
 .overlay {
