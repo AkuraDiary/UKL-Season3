@@ -6,6 +6,7 @@ if(isset($_SESSION['username'])){
 ?>
 <html>
     <head>
+    <link rel="stylesheet" type="text/css" href="/mengukl/Styles/login.css">
         <title>LOG IN</title>
     </head>
 <body>

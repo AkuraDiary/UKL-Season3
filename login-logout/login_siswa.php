@@ -1,12 +1,15 @@
 <?php
 session_start();
-require_once("../utils/connect.php");
+$path = $_SERVER['DOCUMENT_ROOT'];
+$path .= "/mengukl/utils/connect.php";
+require_once($path);
 if(isset($_SESSION['nisn'])){
     header("location: ../index_siswa.php");
 }
 ?>
 <html>
     <head>
+    <link rel="stylesheet" type="text/css" href="/mengukl/Styles/login.css">
         <title>LOG IN</title>
     </head>
 <body>

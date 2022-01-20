@@ -12,7 +12,7 @@ if(!isset($_SESSION['username'])){
 
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="./Styles/index.css">  
+    <link rel="stylesheet" type="text/css" href="/mengukl/Styles/index.css">  
         <title>UKL Pembayaran SPP</title>
     </head>
 <body>
