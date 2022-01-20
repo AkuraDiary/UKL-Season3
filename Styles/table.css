@@ -22,7 +22,7 @@
     text-transform: uppercase;    
 }
 .all-table a:hover{
-    color: #FF5E14 !important;
+    color: aqua !important;
     text-decoration: none;
 }
 .all-table button{
@@ -39,16 +39,20 @@
 }
 .table-number{
     /* make it centered */
+    border-color: white;
     text-align: center;
     font-size: 15px;
     padding-bottom: 20px;
 }
+
 .table{
     /* make table centered */
     margin: 0 auto;
     max-width: 90% !important;
     border: #212529 !important;
-    border-end-end-radius: 10px !important;
+    border-radius: 10px;
+    border-color: aqua;
+    border-width: 4px;
 
 }
 .custom-select{
@@ -60,6 +64,4 @@
 .form-control{
     width: 69% !important;
 }
-.form{
-    /*todo*/
-}
+

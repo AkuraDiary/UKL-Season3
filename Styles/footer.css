@@ -2,16 +2,15 @@
 
 .footer-section {
   background: #212529;
-  position: relative;
-  /*ensure footer is always in footer*/
+  position: sticky;
+  width: 100%;
   bottom: 0;
-  margin-bottom: 0px;
 }
-
-/*
 .footer-section a{
   text-decoration: none !important;
 }
+/*
+
 .footer-cta {
   border-bottom: 1px solid #000;
 }

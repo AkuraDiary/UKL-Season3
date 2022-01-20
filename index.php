@@ -57,7 +57,7 @@ if(!isset($_SESSION['username'])){
   </div>
   
 </div>
-<?php require_once("./misc/footer.php"); ?>
+<?php require("./misc/footer.php"); ?>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
 </body>
