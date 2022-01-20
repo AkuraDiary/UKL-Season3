@@ -51,7 +51,7 @@ require_once("../misc/require.php");
     </form>
 <hr />
             <!-- Panggil footer -->
-    <?php require("footer.php"); ?>
+    <?php require("../misc/footer.php"); ?>
 </body>
 </html>
 <?php

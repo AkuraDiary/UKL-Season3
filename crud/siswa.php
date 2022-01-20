@@ -58,7 +58,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
 <?php for($i=1; $i <= $totalHalaman; $i++): ?>
         <a href="?hal=<?= $i; ?>"><?= $i; ?></a>
 <?php endfor; ?>
-<!-- Selesai -->
+<!-- Selesai -->    
     <hr />
     <?php require_once("../misc/footer.php"); ?>
 </body>

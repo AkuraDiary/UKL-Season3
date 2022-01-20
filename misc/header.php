@@ -7,7 +7,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <?php
-    include "./utils/connect.php";
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= "/mengukl/utils/connect.php";
+    include($path);
     $panggil = mysqli_query($connect, "SELECT * FROM petugas WHERE username='$username'");
     $hasil = mysqli_fetch_assoc($panggil);    
     ?>
