@@ -41,6 +41,7 @@ if(isset($_POST['login'])){
         }
 }
 ?>
+<!--
         <tr>
             <td>NISN :</td>
             <td><input type="text" name="nisn"></td>
@@ -59,5 +60,39 @@ if(isset($_POST['login'])){
 </form>
 </center>
 </body>
+-->
+<div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card">
+				<div class="card-header">
+					<h2>Sign In</h2>
+					<div class="d-flex justify-content-end social_icon">
+						<span><i class="fab fa-facebook-square"></i></span>
+						<span><i class="fab fa-google-plus-square"></i></span>
+						<span><i class="fab fa-twitter-square"></i></span>
+					</div>
+				</div>
+				<div class="card-body">
+					<form action="" method="POST">
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="text" name="nisn" class="form-control" placeholder="NISN">
+						</div>
+						<div class="form-group">
+							<input type="submit" name="login" value="LOG IN" class="btn float-right login_btn">
+						</div>
+					</form>
+				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-center links">
+						Apakah anda seorang Petugas ?
+						<a href="login.php">Login Disini</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </html>
