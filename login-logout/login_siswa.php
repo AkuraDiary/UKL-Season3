@@ -28,7 +28,7 @@ if(isset($_POST['login'])){
         }else{
         // Jika nisn siswa sesuai dengan database maka akan redirect ke halaman utama dan akan dibuatkan sesi
             $_SESSION['nisn'] = $_POST['nisn'];
-            header("location: index_siswa.php");
+            header("location: ../index_siswa.php");
         }
 }
 ?>
@@ -42,7 +42,7 @@ if(isset($_POST['login'])){
         </tr>
         <tr>
             <td colspan="2"><center>Apakah anda seorang petugas? login 
-                                    <a href="./mengukl/login-logout/login.php">disini</a>
+                                    <a href="/mengukl/login-logout/login.php">disini</a>
                             </center>
             </td>
         </tr>
