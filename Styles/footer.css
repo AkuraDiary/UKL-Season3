@@ -162,6 +162,9 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+a.copyright-text{
+  color: rgb(81, 0, 128);
+}
 /* @media screen and (max-width: 992px) {
   .single-cta i {
     color: none !important;

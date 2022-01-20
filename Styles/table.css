@@ -1,5 +1,6 @@
-/* Amburadul css by panca */
+/* Amburadul css by panca edited by seta*/
 .all-table{
+    background-image: url(/Assets/index_wallpaper.jpg);
     background-color: #212529 !important;
 }
 .all-table h3{
@@ -45,17 +46,19 @@
 .table{
     /* make table centered */
     margin: 0 auto;
-    max-width: 98% !important;
+    max-width: 90% !important;
     border: #212529 !important;
+    border-end-end-radius: 10px !important;
+
 }
 .custom-select{
     border: 1px solid #ced4da !important;
     height: 30px !important;
     border-radius: .25rem !important;
-    width: 28.5% !important;
+    width: 69% !important;
 }
 .form-control{
-    width: 28.5% !important;
+    width: 69% !important;
 }
 .form{
     /*todo*/
