@@ -4,37 +4,58 @@ if(isset($_SESSION['username'])){
     header("location: index.php");
 }
 ?>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <html>
     <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/mengukl/Styles/login.css">
         <title>LOG IN</title>
     </head>
 <body>
-<center>
-    <h1>Silahkan Login</h1>
-            <hr />
-<form action="../login-logout/proseslogin.php" method="POST">
-    <table>
-        <tr>
-            <td>Username :</td>
-            <td><input type="text" name="username"></td>
-        </tr>
-        <tr>
-            <td>Password :</td>
-            <td><input type="password" name="password"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" value="LOG IN" name="login"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><center>Apakah anda seorang siswa? login 
-                                    <a href="login_siswa.php">disini</a>
-                            </center>
-            </td>
-        </tr>
-    </table>
-</form>
-</center>
+	<div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card">
+				<div class="card-header">
+					<h2>Sign In</h2>
+					<div class="d-flex justify-content-end social_icon">
+						<span><i class="fab fa-facebook-square"></i></span>
+						<span><i class="fab fa-google-plus-square"></i></span>
+						<span><i class="fab fa-twitter-square"></i></span>
+					</div>
+				</div>
+				<div class="card-body">
+					<form action="/mengukl/login-logout/proseslogin.php" method="POST">
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" name="username" class="form-control" placeholder="username">
+							
+						</div>
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="password" class="form-control" placeholder="password">
+						</div>
+						<div class="form-group">
+							<input type="submit" name="login" value="LOG IN" class="btn float-right login_btn">
+						</div>
+					</form>
+				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-center links">
+						Anda Seorang Murid ?
+						<a href="login_siswa.php">LOGIN MURID</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
