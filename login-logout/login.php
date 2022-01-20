@@ -51,7 +51,7 @@ if(isset($_SESSION['username'])){
 				<div class="card-footer">
 					<div class="d-flex justify-content-center links">
 						Anda Seorang Murid ?
-						<a href="login_siswa.php">LOGIN MURID</a>
+						<a href="login_siswa.php"><b> Login Murid </b></a>
 					</div>
 				</div>
 			</div>

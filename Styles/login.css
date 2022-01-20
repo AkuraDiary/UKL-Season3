@@ -13,6 +13,10 @@ html,body{
     align-content: center;
 }
 
+.fas {
+    color: white;
+}
+
 .card{
     height: 300px;
     margin-top: auto;
@@ -66,14 +70,14 @@ input:focus{
 }
 
 .login_btn{
-    color: black;
+    color: whitesmoke;
     background-color: #8112ff;
     width: 100px;
 }
 
 .login_btn:hover{
-    color: black;
-    background-color: white;
+    color: #8112ff;
+    background-color: whitesmoke;
 }
 
 .links{
@@ -82,5 +86,5 @@ input:focus{
 
 .links a{
     margin-left: 4px;
-    color: #2d0d86;
+    color: #9034fa;
 }

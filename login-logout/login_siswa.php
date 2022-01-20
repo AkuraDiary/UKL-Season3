@@ -71,7 +71,7 @@ if(isset($_POST['login'])){
 				<div class="card-footer">
 					<div class="d-flex justify-content-center links">
 						Apakah anda seorang Petugas ?
-						<a href="login.php">Login Disini</a>
+						<a href="login.php"><b>Login Disini</b></a>
 					</div>
 				</div>
 			</div>

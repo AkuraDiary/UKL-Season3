@@ -19,13 +19,15 @@ nav a{
     transition: all .3s ease-in-out !important;
 }
 nav{
+    height: max-content;
     border-radius: 0 !important;
-    color: #000;
-    background-color: rgb(12, 3, 3) !important;
+    color: rgb(3, 7, 6);
+    
+    background-color: rgb(12, 10, 11) !important;
     transition: all .3s;
 }
 nav a:hover{
-    color: #14dcff !important;    
+    color: aqua !important;    
     -webkit-transform: translateY(-3px);
     -moz-transform: translateY(-3px);
     -ms-transform: translateY(-3px);
