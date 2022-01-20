@@ -5,6 +5,7 @@ require "../utils/connect.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
     <title>CRUD Data Siswa</title>
 </head>
@@ -13,8 +14,8 @@ require "../utils/connect.php";
     <?php require_once("../misc/header.php"); ?>
     <!-- Isi Konten -->
     <h3>Siswa</h3>
-    <p><a href="tambah_siswa.php">Tambah Data</a></p>
-    <table cellspacing="0" border="1" cellpadding="5">
+    <p><a href="tambah_siswa.php"><button type="button" class="btn btn-outline-secondary">Tambah Data</button></a></p>
+    <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
         <tr>
             <td>No. </td>
             <td>NISN</td>

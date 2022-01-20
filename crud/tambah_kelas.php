@@ -1,9 +1,11 @@
 <?php
 require_once("../misc/require.php");
+require "../utils/connect.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
     <title>Tambah Kelas</title>
 </head>
@@ -29,7 +31,7 @@ require_once("../misc/require.php");
     </form>
 <hr />
             <!-- Panggil footer -->
-    <?php require("footer.php"); ?>
+    <?php require("../misc/footer.php"); ?>
 </body>
 </html>
 <?php
@@ -37,7 +39,7 @@ require_once("../misc/require.php");
 if(isset($_POST['simpan'])){
     $nama = $_POST['nama'];
     $kk = $_POST['kk'];
-    $simpan = mysqli_query($db, "INSERT INTO kelas VALUES(NULL, '$nama', '$kk')");
+    $simpan = mysqli_query($connect, "INSERT INTO kelas VALUES(NULL, '$nama', '$kk')");
         if($simpan){
             header("location: kelas.php");
         }else{
