@@ -1,7 +1,7 @@
 
 
 html,body{
-    background-image: url('/mengukl/Assets/wallpaper.jpg');
+    background-image: url('/mengukl/Assets/wallpaper.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -24,7 +24,7 @@ html,body{
 .social_icon span{
     font-size: 60px;
     margin-left: 10px;
-    color: #FFC312;
+    color: blueviolet;
 }
 
 .social_icon span:hover{
@@ -44,7 +44,7 @@ html,body{
 
 .input-group-prepend span{
     width: 50px;
-    background-color: #FFC312;
+    background-color: #2d0d86;
     color: black;
     border:0 !important;
 }
@@ -67,7 +67,7 @@ input:focus{
 
 .login_btn{
     color: black;
-    background-color: #FFC312;
+    background-color: #8112ff;
     width: 100px;
 }
 
@@ -82,4 +82,5 @@ input:focus{
 
 .links a{
     margin-left: 4px;
+    color: #2d0d86;
 }

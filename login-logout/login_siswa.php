@@ -20,8 +20,6 @@ if(isset($_SESSION['nisn'])){
     </head>
 <body>
 <center>
-    <h1>Silahkan Login</h1>
-            <hr />
 <form action="" method="POST">
     <table>
         <tr>
