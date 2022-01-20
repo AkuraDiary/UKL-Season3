@@ -59,8 +59,12 @@ require_once("../misc/require.php");
     </form>
 </div>
 
-            <!-- Panggil footer -->
-    <?php require("../misc/footer.php"); ?>
+    <!-- Panggil footer -->
+    <?php
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= "/mengukl/misc/footer.php"; 
+    require($path); 
+    ?>
 </body>
 </html>
 <?php

@@ -64,7 +64,11 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
 </div>  
 <!-- Selesai -->    
 </div>
-    <?php require_once("../misc/footer.php"); ?>
+    <?php 
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= "/mengukl/misc/footer.php"; 
+    require($path); 
+    ?>
 </body>
 </html>
 <?php
