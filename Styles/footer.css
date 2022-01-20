@@ -1,11 +1,11 @@
 /* Amburadul css in collaboration of PanGami and AkuraDiary*/
-ul {
-    margin: 0px;
-    padding: 0px;
-}
+
 .footer-section {
   background: #212529;
   position: relative;
+  /*ensure footer is always in footer*/
+  bottom: 0;
+  margin-bottom: 0px;
 }
 
 /*
@@ -157,6 +157,10 @@ ul {
   display: inline-block;
   margin-left: 20px;
 }
+
+a.copyright-text{
+  color: rgb(81, 0, 128);
+}
 /*
 .footer-menu li:hover a{
   color: #ff5e14;
@@ -165,9 +169,7 @@ ul {
   font-size: 14px;
   color: #878787;
 }
-a.copyright-text{
-  color: rgb(81, 0, 128);
-}
+
 /* @media screen and (max-width: 992px) {
   .single-cta i {
     color: none !important;

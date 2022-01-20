@@ -32,6 +32,9 @@ require "../utils/connect.php";
 $totalDataHalaman = 5;
 $data = mysqli_query($connect, "SELECT * FROM siswa");
 $hitung = mysqli_num_rows($data);
+if($hitung <= 1){
+    echo "<tr><td colspan='8' rowspan='5' align='center'>Tidak Ada Data</td></tr>";
+}
 $totalHalaman = ceil($hitung / $totalDataHalaman);
 $halAktif = (isset($_GET['hal'])) ? $_GET['hal'] : 1;
 $dataAwal = ($totalDataHalaman * $halAktif) - $totalDataHalaman;
