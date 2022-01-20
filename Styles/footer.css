@@ -1,4 +1,4 @@
-/* Amburadul css by panca edited by seta*/
+/* Amburadul css in collaboration of PanGami and AkuraDiary*/
 ul {
     margin: 0px;
     padding: 0px;
@@ -7,6 +7,8 @@ ul {
   background: #212529;
   position: relative;
 }
+
+/*
 .footer-section a{
   text-decoration: none !important;
 }
@@ -138,7 +140,7 @@ ul {
   color: #fff;
   font-size: 22px;
   transform: rotate(-6deg);
-}
+}*/
 .copyright-area{
   background: #202020;
   padding: 25px 0;
@@ -149,12 +151,13 @@ ul {
   color: #878787;
 }
 .copyright-text p a{
-  color: #ff5e14;
+  color: teal;
 }
 .footer-menu li {
   display: inline-block;
   margin-left: 20px;
 }
+/*
 .footer-menu li:hover a{
   color: #ff5e14;
 }
