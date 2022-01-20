@@ -15,7 +15,7 @@ require "../utils/connect.php";
     <div class="all-table">
         <!-- Isi Konten -->
     <h3>Kelas</h3>
-    <p><a href="tambah_kelas.php"><button type="button" class="btn btn-outline-secondary">Tambah Data</button></a></p>
+    <p><a href="tambah_kelas.php"><button type="button" class="btn btn-outline-secondary">Tambah Data Kelas</button></a></p>
     <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
         <tr>
             <td>No. </td>

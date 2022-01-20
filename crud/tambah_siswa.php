@@ -4,7 +4,7 @@ require_once("../misc/require.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="./Styles/table.css">
+<link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
     <title>Tambah Siswa</title>
 </head>
@@ -58,7 +58,7 @@ require_once("../misc/require.php");
         </table>
     </form>
 </div>
-<hr />
+
             <!-- Panggil footer -->
     <?php require("../misc/footer.php"); ?>
 </body>

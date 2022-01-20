@@ -12,9 +12,10 @@ require "../utils/connect.php";
 <body>
     <!-- Panggil script header -->
     <?php require_once("../misc/header.php"); ?>
+    <div class="all-table">
     <!-- Isi Konten -->
     <h3>Siswa</h3>
-    <p><a href="tambah_siswa.php"><button type="button" class="btn btn-outline-secondary">Tambah Data</button></a></p>
+    <p><a href="tambah_siswa.php"><button type="button" class="btn btn-outline-secondary">Tambah Data Siswa</button></a></p>
     <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
         <tr>
             <td>No. </td>
@@ -56,11 +57,13 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
 <?php $no++; } ?>
     </table>
 <!-- Tampilkan tombol halaman -->
+<div class="table-number">
 <?php for($i=1; $i <= $totalHalaman; $i++): ?>
         <a href="?hal=<?= $i; ?>"><?= $i; ?></a>
 <?php endfor; ?>
+</div>  
 <!-- Selesai -->    
-    <hr />
+</div>
     <?php require_once("../misc/footer.php"); ?>
 </body>
 </html>

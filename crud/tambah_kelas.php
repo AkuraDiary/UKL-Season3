@@ -13,23 +13,25 @@ require "../utils/connect.php";
     <!-- Panggil header -->
     <?php require("../misc/header.php"); ?>
     <!-- Konten -->
+    <div class="all-table">  
     <h3>Tambah Kelas</h3>
     <form action="" method="POST">
-        <table cellpadding="5">
+        <!--center the table-->
+        <table  class="table table-striped table-dark" cellpadding="5">
             <tr>
                 <td>Nama Kelas :</td>
-                <td><input type="text" name="nama"></td>
+                <td><input class="form-control" type="text" name="nama"></td>
             </tr>
             <tr>
                 <td>Kompetensi Keahlian :</td>
-                <td><input type="text" name="kk"></td>
+                <td><input class="form-control" type="text" name="kk"></td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit" name="simpan">Simpan</button></td>
+                <td colspan="2"><button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button></td>
             </tr>
         </table>
     </form>
-<hr />
+</div>
             <!-- Panggil footer -->
     <?php require("../misc/footer.php"); ?>
 </body>
