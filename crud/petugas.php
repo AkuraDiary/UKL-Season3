@@ -63,7 +63,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
     <?php 
     $Footerpath = $_SERVER['DOCUMENT_ROOT'];
     $Footerpath .= "/mengukl/misc/footer.php"; 
-    require($Footerpath);; ?>
+    require($Footerpath); ?>
 </body>
 </html>
 <?php

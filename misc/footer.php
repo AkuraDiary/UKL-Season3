@@ -5,7 +5,6 @@
         <script src='./Styles/fontAwesome.js' crossorigin='anonymous'></script>
     </head>
     <footer class="footer-section">
-            
         <div class="copyright-area">
             <div class="container">
                 <div class="text-center">

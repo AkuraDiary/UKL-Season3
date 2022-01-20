@@ -1,9 +1,13 @@
 <?php
 require_once("../misc/require.php");
+$path = $_SERVER['DOCUMENT_ROOT'];
+$path .= "/mengukl/utils/connect.php";
+require($path);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
     <title>Tambah Petugas</title>
 </head>
@@ -11,42 +15,32 @@ require_once("../misc/require.php");
     <!-- Panggil header -->
     <?php require("../misc/header.php"); ?>
     <!-- Konten -->
+    <div class="all-table">  
     <h3>Tambah Petugas</h3>
-    <form action="" method="POST">
-        <table cellpadding="5">
+    <form action="mengnyimpan_petugas.php" method="POST">
+        <table class="table table-striped table-dark" cellpadding="5">
             <tr>
                 <td>Username :</td>
-                <td><input type="text" name="user"></td>
+                <td><input class="form-control" type="text" name="user"></td>
             </tr>
             <tr>
                 <td>Password :</td>
-                <td><input type="text" name="pass"></td>
+                <td><input class="form-control" type="password" name="pass"></td>
             </tr>
             <tr>
                 <td>Nama :</td>
-                <td><input type="text" name="nama"></td>
+                <td><input class="form-control" type="text" name="nama"></td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit" name="simpan">Simpan</button></td>
+                <td colspan="2"><button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button></td>
             </tr>
         </table>
     </form>
-<hr />
-            <!-- Panggil footer -->
-    <?php require("footer.php"); ?>
+</div>
+    <!-- Panggil footer -->
+    <?php 
+    $Footerpath = $_SERVER['DOCUMENT_ROOT'];
+    $Footerpath .= "/mengukl/misc/footer.php"; 
+    require($Footerpath); ?>
 </body>
 </html>
-<?php
-// Proses Simpan
-if(isset($_POST['simpan'])){
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
-    $nama = $_POST['nama'];
-    $simpan = mysqli_query($db, "INSERT INTO petugas VALUES(NULL, '$user', '$pass', '$nama', 'Petugas')");
-        if($simpan){
-            header("location: petugas.php");
-        }else{
-            echo "<script>alert('Data sudah ada');</script>";
-        }
-}
-?>
