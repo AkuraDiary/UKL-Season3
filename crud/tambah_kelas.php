@@ -27,6 +27,10 @@ require "../utils/connect.php";
                 <td><input class="form-control" type="text" name="kk"></td>
             </tr>
             <tr>
+                <td>Angkatan :</td>
+                <td><input class="form-control" type="number" name="angkatan"></td>
+            </tr>
+            <tr>
                 <td colspan="2"><button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button></td>
             </tr>
         </table>
@@ -41,7 +45,8 @@ require "../utils/connect.php";
 if(isset($_POST['simpan'])){
     $nama = $_POST['nama'];
     $kk = $_POST['kk'];
-    $simpan = mysqli_query($connect, "INSERT INTO kelas VALUES(NULL, '$nama', '$kk')");
+    $angkatan = $_POST['angkatan'];
+    $simpan = mysqli_query($connect, "INSERT INTO kelas VALUES(NULL, '$nama', '$kk', $angkatan)");
         if($simpan){
             header("location: kelas.php");
         }else{

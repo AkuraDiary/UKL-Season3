@@ -21,6 +21,7 @@ require "../utils/connect.php";
             <td>No. </td>
             <td>Nama Kelas</td>
             <td>Kompetensi Keahlian</td>
+            <td>Angkatan</td>
             <td>Aksi</td>
         </tr>
 <?php
@@ -39,7 +40,8 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
         <tr>
             <td><?= $no ?></td>
             <td><?= $r['nama_kelas']; ?></td>
-            <td><?= $r['kompetensi_keahlian']; ?></t0 d>
+            <td><?= $r['jurusan']; ?></td>
+            <td><?= $r['angkatan']; ?></td>
             <td><a href="?hapus&id=<?= $r['id_kelas']; ?>">Hapus</a> | 
                 <a href="edit_kelas.php?id=<?= $r['id_kelas']; ?>">Edit</a</td>
         </tr>
