@@ -38,7 +38,10 @@ while($row = mysqli_fetch_assoc($spp)){?>
                 <td><input class="form-control" type="number" name="nominal" value="<?= $row['nominal']; ?>"></td>
             </tr>
             <tr>
-                <td colspan="2"><button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button></td>
+                <td colspan="2">
+                <button class="btn btn-outline-secondary" onclick="history.back()" type="button">Kembali</button>
+                <button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button>
+            </td>
             </tr>
         </table>
     </form>
