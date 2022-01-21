@@ -101,4 +101,7 @@ if($r['jumlah_bayar'] == $r['nominal']){ ?>
     $Footerpath .= "/mengukl/misc/footer.php"; 
     require($Footerpath); ?>
 </body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script  src="Styles/script.js"></script>
 </html>
