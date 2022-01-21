@@ -49,7 +49,10 @@
         <a class="nav-link logout" href="/mengukl/login-logout/logout.php">LogOut</a>
       </li>    
       <?php
-        }else{ ?>
+        }else { ?>
+      <li class="nav-item active">
+        <a class="nav-link nav-link-active" href="/mengukl/index.php">Home</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="/mengukl/transaction/transaksi.php">Transaksi</a>
       </li>

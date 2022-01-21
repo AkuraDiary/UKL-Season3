@@ -1,7 +1,17 @@
 /* Amburadul css by panca edited by seta*/
-.all-table{
-    background-image: url(/Assets/index_wallpaper.jpg);
+
+body{
     background-color: #020508 !important;
+}
+
+.all-table{
+    /*background-image: url(/Assets/index_wallpaper.jpg);*/
+    background-color: #020508 !important;
+}
+
+.all-table h2{
+    margin: 20px;
+    color: white;
 }
 .all-table h3{
     /* make text h3 centered */
@@ -29,13 +39,14 @@
     /* make the button at the right */
     color: #fff;
     border-color: #7e7e7e;;
-    margin-left: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
 }
 
 .all-table button:hover{
     color: aqua;
     border-color: #14a9ff;
-    background-color:#212529 !important;
+    background-color:#020508 !important;
 }
 .table-number{
     /* make it centered */
@@ -64,4 +75,6 @@
 .form-control{
     width: 69% !important;
 }
-
+.id-hide{
+    display: none;
+}
