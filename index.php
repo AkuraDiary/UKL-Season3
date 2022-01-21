@@ -33,7 +33,7 @@ if(!isset($_SESSION['username'])){
                 echo "<div class=\"bg\" data-bg=\"https://www.teahub.io/photos/full/340-3401662_adolf-hitler-quote-meme.jpg\" style=\"background-image: url(https://www.teahub.io/photos/full/340-3401662_adolf-hitler-quote-meme.jpg);\">";
                 echo "</div>";
               }elseif($_SESSION['level'] == "petugas"){
-                echo "<div class=\"bg\" data-bg=\"https://www.desktopbackground.org/p/2014/07/14/793085_joseph-stalin-famous-war-quotes-quotesgram_2461x3431_h.jpg\" style=\"background-image: url(https://www.desktopbackground.org/p/2014/07/14/793085_joseph-stalin-famous-war-quotes-quotesgram_2461x3431_h.jpg);\">";
+                echo "<div class=\"bg\" data-bg=\"https://wallpaperaccess.com/full/2307624.jpg\" style=\"background-image: url(https://wallpaperaccess.com/full/2307624.jpg);\">";
                 echo "</div>";
               }else{
                 echo "<div class=\"bg\" data-bg=\"/Assets/index_wallpaper.jpg\" style=\"background-image: url(/Assets/index_wallpaper.jpg);\">";

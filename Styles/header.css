@@ -19,6 +19,7 @@ nav a{
     transition: all .3s ease-in-out !important;
 }
 nav{
+    margin-top: 10px;
     height: max-content;
     border-radius: 0 !important;
     color: #020508 ;/*rgb(2,5,8);*/ 
