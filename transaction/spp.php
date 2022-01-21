@@ -21,9 +21,8 @@ $connectpath = $_SERVER['DOCUMENT_ROOT'];
     <!-- Isi Konten -->
     <div class="all-table">
     <h3>SPP</h3>
-    <button type="button" class="btn btn-outline-secondary"><a href="../crud/tambah_spp.php">Tambah Data</a></button>
-    <br>
-    <br>
+    <p><a href="../crud/tambah_spp.php"><button type="button" class="btn btn-outline-secondary">Tambah Data Spp</button></a></p>
+    
     <table class="table  table-hover table-dark" cellspacing="0" border="1" cellpadding="5">
         <tr>
             <td>No. </td>

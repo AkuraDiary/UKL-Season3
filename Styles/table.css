@@ -27,13 +27,13 @@ body{
     padding-top: 20px;
 }
 .all-table a{
-    color: #fff !important;
+    color: rgb(210, 129, 235) !important;
     text-decoration: none;
     /* make text capital css    */
     text-transform: uppercase;    
 }
 .all-table a:hover{
-    color: aqua !important;
+    color: rgb(79, 249, 255) !important;
     text-decoration: none;
 }
 .all-table button{
