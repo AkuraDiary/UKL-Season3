@@ -28,6 +28,7 @@ $connectpath = $_SERVER['DOCUMENT_ROOT'];
         <tr>
             <td>No. </td>
             <td>Tahun</td>
+            <td>Id SPP </td>
             <td>Nominal</td>
             <td>Aksi</td>
         </tr>
@@ -47,6 +48,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
         <tr>
             <td><?= $no ?></td>
             <td><?= $r['tahun']; ?></td>
+            <td><?= $r['id_spp']; ?></td>
             <td><?= "Rp. " . $r['nominal']; ?></td>
             <td><a href="?hapus&id=<?= $r['id_spp']; ?>">Hapus</a> | 
                 <a href="edit_spp.php?id=<?= $r['id_spp']; ?>">Edit</a</td>
