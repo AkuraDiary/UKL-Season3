@@ -23,6 +23,7 @@ if(isset($_POST['login'])){
             }else{
                 // Jika user sesuai dengan database maka akan redirect ke halaman utama dan akan dibuatkan sesi
                 $_SESSION['username'] = $_POST['username'];
+                $_SESSION['level'] = $hasil['level'];
                 header("location: ./../index.php");
             }
         }
