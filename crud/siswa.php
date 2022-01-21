@@ -32,7 +32,7 @@ require "../utils/connect.php";
 $totalDataHalaman = 5;
 $data = mysqli_query($connect, "SELECT * FROM siswa");
 $hitung = mysqli_num_rows($data);
-if($hitung <= 1){
+if($hitung <= 0){
     echo "<tr><td colspan='8' rowspan='5' align='center'>Tidak Ada Data</td></tr>";
 }
 $totalHalaman = ceil($hitung / $totalDataHalaman);
@@ -53,7 +53,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
             <td><?= $r['nama']; ?></td>
             <td><?= $r['nama_kelas'] . " | " . $r['jurusan']; ?></td>
             <td><?= $r['alamat']; ?></td>
-            <td><?= $r['no_telp']; ?></td>
+            <td><?= $r['no_tlp']; ?></td>
             <td><a href="?hapus&nisn=<?= $r['nisn']; ?>">Hapus</a> | 
                 <a href="edit_siswa.php?nisn=<?= $r['nisn']; ?>">Edit</a</td>
         </tr>
@@ -82,8 +82,7 @@ if(isset($_GET['hapus'])){
     if($hapus){
         header("location: siswa.php");
     }else{
-        echo "<script>alert('Maaf, data tersebut masih terhubung dengan data yang lain');
-        </script>";
+        echo "<script>alert('Maaf, data tersebut masih terhubung dengan data yang lain');</script>";
     }
 }
 ?>

@@ -50,7 +50,7 @@ require_once("../misc/require.php");
             </tr>
             <tr>
                 <td>No. Telp :</td>
-                <td><input class="form-control" type="tel" name="no"></td>
+                <td><input class="form-control" type="text" name="no"></td>
             </tr>
             <tr>
                 <td>Id SPP :</td>
@@ -81,12 +81,18 @@ if(isset($_POST['simpan'])){
     $alamat = $_POST['alamat'];
     $no = $_POST['no'];
     $id_spp = $_POST['spp'];
-    $simpan = mysqli_query($connect, "INSERT INTO siswa VALUES
-    ('$nisn', '$nis', '$nama', $kelas, '$alamat', '$no',$id_spp)");
-        if($simpan){
+
+    $query = "INSERT INTO siswa VALUES
+    ('$nisn', '$nis', '$nama', $kelas, '$alamat', '$no',$id_spp)";
+    $simpan = mysqli_query($connect, $query);
+    $num = mysqli_affected_rows($connect);
+        if($num > 0){
+            echo "<script>alert('Berhasil Menambah Data!');location.href='siswa.php'</script>";
             header("location: siswa.php");
         }else{
-            echo "<script>alert('Data sudah ada');</script>";
+            $error = mysqli_error($connect);
+            echo $error;
+            echo "<script>alert('Data gagal disimpan : '$error' !');location.href='tambah_siswa.php'</script>";
         }
 }
 ?>

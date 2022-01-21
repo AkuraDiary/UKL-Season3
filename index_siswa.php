@@ -1,6 +1,9 @@
 <?php
 session_start();
-require_once("../utils/connect.php");
+
+$Connectpath = $_SERVER['DOCUMENT_ROOT'];
+$Connectpath .= "/mengukl/utils/connect.php";
+require($Connectpath);
 // Jika sesi dari login belum dibuat maka akan kita kembalikan ke halaman login
 if(!isset($_SESSION['nisn'])){
     header("location: login_siswa.php");
@@ -31,7 +34,7 @@ ORDER BY tgl_bayar");
             <hr />
     <a href="#biodata">Biodata Kamu</a> | 
     <a href="#history">History Pembayaran</a> | 
-    <a href="./mengukl/login-logout/logout.php">Logout</a>
+    <a href="/mengukl/login-logout/logout.php">Logout</a>
             <hr />
     <h2>>> Hallo, <?= $result['nama']; ?></h2>
     <h3>Biodata Kamu</h3>
@@ -93,6 +96,8 @@ if($r['jumlah_bayar'] == $r['nominal']){ ?>
     <?php $no++; } ?>
     </table>
             <hr />
-    <?php require_once("footer.php"); ?>
+    <?php $Footerpath = $_SERVER['DOCUMENT_ROOT'];
+    $Footerpath .= "/mengukl/misc/footer.php"; 
+    require($Footerpath); ?>
 </body>
 </html>
