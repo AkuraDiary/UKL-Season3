@@ -41,7 +41,7 @@ ORDER BY tgl_bayar");
     <h2> <img src="Assets/wallpaper.png" alt="pp" style="border-radius: 50%;" width="50px" height="50px"> Hallo, <?= $result['nama']; ?></h2>
     <button class="btn btn-outline-secondary " name="logout"><a href="/mengukl/login-logout/logout.php">Logout</a></button>
     <h3>Biodata Dan History </h3>
-    <table class="table table-striped table-dark" cellpadding="5" id="biodata">
+    <table class="table table-hover table-dark" cellpadding="5" border="1" id="biodata">
         <tr>
             <td>NISN</td>
             <td>:</td>
@@ -70,7 +70,7 @@ ORDER BY tgl_bayar");
     </table>
             <hr />
     <h3>History Pembayaran Kamu</h3>
-    <table class="table table-striped table-dark" id="history" cellpadding="5">
+    <table class="table table-hover table-dark rounded" id="history" cellpadding="5" border="1">
         <tr>
             <td>No. </td>
             <td>Dibayarkan kepada</td>

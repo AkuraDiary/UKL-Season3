@@ -20,7 +20,7 @@ require($path);
     <div class="all-table">
     <h3>Tambah SPP</h3>
     <form action="" method="POST">
-        <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
+        <table class="table table-hover table-dark" cellspacing="0" border="1" cellpadding="5">
         <tr>
                 <td>Id SPP :</td>
                 <td><input class="form-control" type="number" name="id"></td>

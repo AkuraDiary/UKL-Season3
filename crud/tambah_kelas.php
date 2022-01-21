@@ -17,7 +17,7 @@ require "../utils/connect.php";
     <h3>Tambah Kelas</h3>
     <form action="" method="POST">
         <!--center the table-->
-        <table  class="table table-striped table-dark" cellpadding="5">
+        <table  class="table table-hover table-dark" cellpadding="5">
             <tr>
                 <td>Nama Kelas :</td>
                 <td><input class="form-control" type="text" name="nama"></td>

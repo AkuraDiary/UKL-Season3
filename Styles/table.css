@@ -7,6 +7,7 @@ body{
 .all-table{
     /*background-image: url(/Assets/index_wallpaper.jpg);*/
     background-color: #020508 !important;
+    border-radius: 0.25rem !important;
 }
 
 .all-table h2{
@@ -61,9 +62,9 @@ body{
     /* make table centered */
     margin: 0 auto;
     max-width: 90% !important;
-    border: #212529 !important;
-    border-radius: 10px;
-    border-color: aqua;
+    border-width: 2px !important;
+    border-radius: 0.25rem !important;
+    border-color: #14a9ff;
     border-width: 4px;
 
 }

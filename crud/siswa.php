@@ -16,7 +16,7 @@ require "../utils/connect.php";
     <!-- Isi Konten -->
     <h3>Siswa</h3>
     <p><a href="tambah_siswa.php"><button type="button" class="btn btn-outline-secondary">Tambah Data Siswa</button></a></p>
-    <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
+    <table class="table table-hover table-dark" cellspacing="0" border="1" cellpadding="5">
         <tr>
             <td>No. </td>
             <td>NISN</td>

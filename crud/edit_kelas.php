@@ -22,7 +22,7 @@ $kelas = mysqli_query($connect, "SELECT * FROM kelas WHERE id_kelas='$id'");
 <?php
 while($row = mysqli_fetch_assoc($kelas)){?>
     <form action="" method="POST">
-        <table class="table table-striped table-dark" cellspacing="0" cellpadding="5">
+        <table class="table table-hover table-dark" cellspacing="0" cellpadding="5">
             <input type="hidden" name="id" value="<?= $row['id_kelas']; ?>">
             <tr>
                 <td>Nama Kelas :</td>

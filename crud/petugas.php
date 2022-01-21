@@ -18,7 +18,7 @@ require($path);
     <!-- Isi Konten -->
     <h3>Petugas</h3>
     <p><a href="tambah_petugas.php"><button type="button" class="btn btn-outline-secondary">Tambah Data</button></a></p>
-    <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
+    <table class="table table-hover table-dark" cellspacing="0" border="1" cellpadding="5">
         <tr>
             <td>No. </td>
             <td>Username</td>

@@ -16,7 +16,7 @@ require_once("../misc/require.php");
     <!-- Konten -->
     <h3>Tambah Siswa</h3>
     <form action="" method="POST">
-        <table class="table table-striped table-dark" cellpadding="5">
+        <table class="table table-hover table-dark" cellpadding="5">
             <tr>
                 <td>NISN :</td>
                 <td><input class="form-control" type="text" name="nisn"></td>
