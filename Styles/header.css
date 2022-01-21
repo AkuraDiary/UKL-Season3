@@ -38,14 +38,14 @@ nav a:hover{
 }
 .navbar-brand{
     margin-left: 50px !important;
-    background-color: #020508 !important;
+    background-color: rgba(1, 1, 1, 0) !important;
     margin-top: 7px !important;
     padding-right: 10px;
     border-right: #14efff solid 3px;
     border-radius: 50%;
 }
 .navbar-brand:hover{
-    background-color: #020508 !important;
+    background-color: rgba(1, 1, 1, 0) !important;
     color: rgb(0, 238, 255) !important;
 }
 .logout:hover{

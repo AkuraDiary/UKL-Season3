@@ -54,7 +54,10 @@ while($r = mysqli_fetch_assoc($spp)){ ?>
                 <td><input type="text" name="jumlah" placeholder="1000000"></tdd>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit" name="simpan">Simpan</button></td>
+                <td colspan="2">
+                <button class="btn btn-outline-secondary" onclick="history.back()" type="button">Kembali</button>
+                <button type="submit" name="simpan">Simpan</button>
+            </td>
             </tr>
         </table>
 <hr />
