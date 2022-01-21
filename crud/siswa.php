@@ -51,7 +51,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
             <td><?= $r['nisn']; ?></td>
             <td><?= $r['nis']; ?></td>
             <td><?= $r['nama']; ?></td>
-            <td><?= $r['nama_kelas'] . " | " . $r['kompetensi_keahlian']; ?></td>
+            <td><?= $r['nama_kelas'] . " | " . $r['jurusan']; ?></td>
             <td><?= $r['alamat']; ?></td>
             <td><?= $r['no_telp']; ?></td>
             <td><a href="?hapus&nisn=<?= $r['nisn']; ?>">Hapus</a> | 

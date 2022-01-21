@@ -13,30 +13,37 @@ $kelas = mysqli_query($connect, "SELECT * FROM kelas WHERE id_kelas='$id'");
 <body>
     <!-- Panggil header -->
     <?php require("../misc/header.php"); ?>
+    <div class="all-table">
     <!-- Konten -->
     <h3>Edit data Kelas</h3>
 <?php
 while($row = mysqli_fetch_assoc($kelas)){?>
     <form action="" method="POST">
-        <table cellpadding="5">
+        <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
             <input type="hidden" name="id" value="<?= $row['id_kelas']; ?>">
             <tr>
                 <td>Nama Kelas :</td>
-                <td><input type="text" name="nama" value="<?= $row['nama_kelas']; ?>"></td>
+                <td><input class="form-control" type="text" name="nama" value="<?= $row['nama_kelas']; ?>"></td>
             </tr>
             <tr>
                 <td>Kompetensi Keahlian :</td>
-                <td><input type="text" name="kk" value="<?= $row['kompetensi_keahlian']; ?>"></td>
+                <td><input class="form-control" type="text" name="kk" value="<?= $row['jurusan']; ?>"></td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit" name="simpan">Simpan</button></td>
+                <td>Angkatan :</td>
+                <td><input class="form-control" type="number" name="angkatan" value="<?= $row['angkatan']; ?>"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button></td>
             </tr>
         </table>
     </form>
 <?php } ?>
-<hr />
+    </div>
     <!-- Panggil footer -->
-    <?php require("./misc/footer.php"); ?>
+    <?php $Footerpath = $_SERVER['DOCUMENT_ROOT'];
+    $Footerpath .= "/mengukl/misc/footer.php"; 
+    require($Footerpath);?>
 </body>
 </html>
 <?php
@@ -45,7 +52,8 @@ if(isset($_POST['simpan'])){
     $id = $_POST['id'];
     $nama = $_POST['nama'];
     $kk = $_POST['kk'];
-    $update = mysqli_query($connect, "UPDATE kelas SET nama_kelas='$nama', kompetensi_keahlian='$kk'
+    $angkatan = $_POST['angkatan'];
+    $update = mysqli_query($connect, "UPDATE kelas SET nama_kelas='$nama', jurusan='$kk', angkatan = $angkatan
                                  WHERE kelas.id_kelas='$id'");
         if($update){
             header("location: kelas.php");

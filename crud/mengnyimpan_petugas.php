@@ -21,17 +21,8 @@ if(empty($user) || empty($pass) || empty($nama)){
     }else{
         $error = mysqli_error($connect);
         echo $error;
-        //echo "<script>alert('Data gagal disimpan : '$error' !');location.href='tambah_petugas.php'</script>";
+        echo "<script>alert('Data gagal disimpan : '$error' !');location.href='tambah_petugas.php'</script>";
     }
-    
-    /*if($simpan){
-        echo "<script>alert('Data tersimpan !');location.href='petugas.php'</script>";
-    }elseif(empty($_POST['simpan'])){
-        echo "<script>alert('$simpan');</script>";
-        echo "<script>alert('Data kosong !');location.href='petugas.php';</script>";
-    }else{
-        echo "<script>alert('Data sudah ada');location.href='petugas.php';</script>";
-    }*/
 }
 
 ?>

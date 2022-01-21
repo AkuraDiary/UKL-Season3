@@ -38,7 +38,7 @@ require_once("../misc/require.php");
                         $kelas = mysqli_query($connect, "SELECT * FROM kelas");
                         while($r = mysqli_fetch_assoc($kelas)){ ?>
                             <option value="<?= $r['id_kelas']; ?>"><?= $r['nama_kelas'] . " | "
-                            . $r['kompetensi_keahlian']; ?></option>
+                            . $r['jurusan']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
@@ -51,6 +51,10 @@ require_once("../misc/require.php");
             <tr>
                 <td>No. Telp :</td>
                 <td><input class="form-control" type="tel" name="no"></td>
+            </tr>
+            <tr>
+                <td>Id SPP :</td>
+                <td><input class="form-control" type="number" name="spp"></td>
             </tr>
             <tr>
                 <td colspan="2"><button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button></td>
@@ -76,8 +80,9 @@ if(isset($_POST['simpan'])){
     $kelas = $_POST['kelas'];
     $alamat = $_POST['alamat'];
     $no = $_POST['no'];
+    $id_spp = $_POST['spp'];
     $simpan = mysqli_query($connect, "INSERT INTO siswa VALUES
-    ('$nisn', '$nis', '$nama', '$kelas', '$alamat', '$no')");
+    ('$nisn', '$nis', '$nama', $kelas, '$alamat', '$no',$id_spp)");
         if($simpan){
             header("location: siswa.php");
         }else{

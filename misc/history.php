@@ -55,7 +55,7 @@ if(isset($_POST['cari'])){
             <tr>
                 <td>Kelas</td>
                 <td>:</td>
-                <td><?= $r_siswa['nama_kelas'] . " | " . $r_siswa['kompetensi_keahlian']; ?></td>
+                <td><?= $r_siswa['nama_kelas'] . " | " . $r_siswa['jurusan']; ?></td>
             </tr>
         </table>
         <hr />

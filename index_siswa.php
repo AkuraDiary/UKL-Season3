@@ -55,7 +55,7 @@ ORDER BY tgl_bayar");
         <tr>
             <td>Kelas</td>
             <td>:</td>
-            <td><?= $result['nama_kelas'] . " | " . $result['kompetensi_keahlian']; ?></td>
+            <td><?= $result['nama_kelas'] . " | " . $result['jurusan']; ?></td>
         </tr>
         <tr>
             <td>Alamat</td>

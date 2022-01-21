@@ -30,7 +30,7 @@ while($row = mysqli_fetch_assoc($siswa)){?>
 $kelas = mysqli_query($db, "SELECT * FROM kelas");
 while($r = mysqli_fetch_assoc($kelas)){ ?>
                         <option value="<?= $r['id_kelas']; ?>"><?= $r['nama_kelas'] . " | " 
-                    . $r['kompetensi_keahlian']; ?></option>
+                    . $r['jurusan']; ?></option>
 <?php } ?>          </select></td>
             </tr>
             <tr>
