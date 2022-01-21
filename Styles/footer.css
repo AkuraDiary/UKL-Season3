@@ -1,7 +1,7 @@
 /* Amburadul css in collaboration of PanGami and AkuraDiary*/
 
 .footer-section {
-  background: #212529;
+  background: #020508;
   position: sticky;
   width: 100%;
   bottom: 0;
@@ -141,7 +141,7 @@
   transform: rotate(-6deg);
 }*/
 .copyright-area{
-  background: #202020;
+  background: #020508;
   padding: 25px 0;
 }
 .copyright-text p {

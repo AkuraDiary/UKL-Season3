@@ -48,12 +48,12 @@ if(isset($_POST['login'])){
 		<div class="d-flex justify-content-center h-100">
 			<div class="card">
 				<div class="card-header">
-					<h2>Sign In</h2>
-					<div class="d-flex justify-content-end social_icon">
+					<h2>Login Siswa</h2>
+					<!--<div class="d-flex justify-content-end social_icon">
 						<span><i class="fab fa-facebook-square"></i></span>
 						<span><i class="fab fa-google-plus-square"></i></span>
 						<span><i class="fab fa-twitter-square"></i></span>
-					</div>
+					</div>-->
 				</div>
 				<div class="card-body">
 					<form action="" method="POST">
