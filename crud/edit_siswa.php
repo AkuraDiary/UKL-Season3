@@ -1,7 +1,12 @@
 <?php
 require_once("../misc/require.php");
+
+$path = $_SERVER['DOCUMENT_ROOT'];
+$path .= "/mengukl/utils/connect.php";
+require($path);
+
 $nisnSiswa = $_GET['nisn'];
-$siswa = mysqli_query($db, "SELECT * FROM siswa WHERE nisn='$nisnSiswa'");
+$siswa = mysqli_query($connect, "SELECT * FROM siswa WHERE nisn='$nisnSiswa'");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +54,10 @@ while($r = mysqli_fetch_assoc($kelas)){ ?>
 <?php } ?>
 <hr />
     <!-- Panggil footer -->
-    <?php require("footer.php"); ?>
+    <?php 
+    $Footerpath = $_SERVER['DOCUMENT_ROOT'];
+    $Footerpath .= "/mengukl/misc/footer.php"; 
+    require($Footerpath); ?>
 </body>
 </html>
 <?php

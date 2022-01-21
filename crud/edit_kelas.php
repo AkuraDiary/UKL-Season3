@@ -7,6 +7,9 @@ $kelas = mysqli_query($connect, "SELECT * FROM kelas WHERE id_kelas='$id'");
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
     <title>Edit data Kelas</title>
 </head>
@@ -19,7 +22,7 @@ $kelas = mysqli_query($connect, "SELECT * FROM kelas WHERE id_kelas='$id'");
 <?php
 while($row = mysqli_fetch_assoc($kelas)){?>
     <form action="" method="POST">
-        <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
+        <table class="table table-striped table-dark" cellspacing="0" cellpadding="5">
             <input type="hidden" name="id" value="<?= $row['id_kelas']; ?>">
             <tr>
                 <td>Nama Kelas :</td>
@@ -56,7 +59,7 @@ if(isset($_POST['simpan'])){
     $update = mysqli_query($connect, "UPDATE kelas SET nama_kelas='$nama', jurusan='$kk', angkatan = $angkatan
                                  WHERE kelas.id_kelas='$id'");
         if($update){
-            header("location: kelas.php");
+            echo "<script>alert('Data Berhasil Diubah !');location.href='kelas.php';</script>";
         }else{
             echo "<script>alert('Gagal'); </script>";
         }

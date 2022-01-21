@@ -17,6 +17,7 @@ require($path);
     <!-- Konten -->
     <div class="all-table">  
     <h3>Tambah Petugas</h3>
+    <br>
     <form action="mengnyimpan_petugas.php" method="POST">
         <table class="table table-striped table-dark" cellpadding="5">
             <tr>

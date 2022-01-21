@@ -46,8 +46,9 @@ body{
 .all-table button:hover{
     color: aqua;
     border-color: #14a9ff;
-    background-color:#020508 !important;
+    background-color:rgba(1, 1, 1, 0) !important;
 }
+
 .table-number{
     /* make it centered */
     border-color: white;
