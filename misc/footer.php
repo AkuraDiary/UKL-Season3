@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="text-center">
                     <div class="copyright-text">
-                        <p>Copyright &copy; 2022, All Right Reserved <a href="https://github.com/AkuraDiary">AkuraDiary</a> & <a href="https://github.com/PanGami">PanGami</a></p>
+                        <p>Copyright &copy; 2022, All Right Reserved. Amburadul Template in collaboration of <a href="https://github.com/AkuraDiary">AkuraDiary</a> & <a href="https://github.com/PanGami">PanGami</a></p>
                     </div>
                 </div>                    
             </div>
