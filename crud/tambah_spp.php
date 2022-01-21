@@ -1,9 +1,13 @@
 <?php
 require_once("../misc/require.php");
+$path = $_SERVER['DOCUMENT_ROOT'];
+$path .= "/mengukl/utils/connect.php";
+require($path);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
     <title>Tambah SPP</title>
 </head>
@@ -11,37 +15,53 @@ require_once("../misc/require.php");
     <!-- Panggil header -->
     <?php require("../misc/header.php"); ?>
     <!-- Konten -->
+    <div class="all-table">
     <h3>Tambah SPP</h3>
     <form action="" method="POST">
-        <table cellpadding="5">
+        <table class="table table-striped table-dark" cellspacing="0" border="1" cellpadding="5">
+        <tr>
+                <td>Id SPP :</td>
+                <td><input class="form-control" type="number" name="id"></td>
+            </tr>
+        <tr>
+                <td>Angkatan :</td>
+                <td><input class="form-control" type="number" name="angkatan"></td>
+            </tr>
             <tr>
                 <td>Tahun :</td>
-                <td><input type="text" name="tahun"></td>
+                <td><input class="form-control" type="number" name="tahun"></td>
             </tr>
             <tr>
                 <td>Nominal :</td>
-                <td><input type="text" name="nominal"></td>
+                <td><input class="form-control" type="number" name="nominal"></td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit" name="simpan">Simpan</button></td>
+                <td colspan="2"><button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button></td>
             </tr>
         </table>
     </form>
-<hr />
+    </div>
             <!-- Panggil footer -->
-    <?php require("footer.php"); ?>
+    <?php $footerpath = $_SERVER['DOCUMENT_ROOT'];
+    $footerpath .= "/mengukl/misc/footer.php"; 
+    require($footerpath);?>
 </body>
 </html>
 <?php
 // Proses Simpan
 if(isset($_POST['simpan'])){
+    $id = $_POST['id'];
+    $angkatan = $_POST['angkatan'];
     $tahun = $_POST['tahun'];
     $nominal = $_POST['nominal'];
-    $simpan = mysqli_query($db, "INSERT INTO spp VALUES(NULL, '$tahun', '$nominal')");
+    $simpan = mysqli_query($connect, "INSERT INTO spp VALUES($id, $angkatan, $tahun, $nominal)");
         if($simpan){
-            header("location: spp.php");
+            echo "<script>alert('Data Berhasil Ditambahkan !');location.href='../transaction/spp.php';</script>";
         }else{
-            echo "<script>alert('Data sudah ada');</script>";
+            //show the error
+            $error = mysqli_error($connect);
+        echo $error;
+        echo "<script>alert('Data gagal disimpan : '$error' !');location.href='tambah_spp.php'</script>";
         }
 }
 ?>
