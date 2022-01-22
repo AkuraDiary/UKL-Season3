@@ -29,7 +29,7 @@ nav{
 }
 nav a:hover{
     color: aqua !important;    
-    background-color: #020508 !important;
+    background-color: rgba(1, 1, 1, 0) !important;
     -webkit-transform: translateY(-3px);
     -moz-transform: translateY(-3px);
     -ms-transform: translateY(-3px);
@@ -51,4 +51,19 @@ nav a:hover{
 .logout:hover{
     background-color: #020508 !important;
     color: tomato !important;
+}
+
+.navbar-text h3{
+    color: #fff !important;
+    font-size: 2vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+    align-self: reverse;
+}
+
+.navbar-text h3:hover{
+    color: #14efff !important;
+}
+.dropdown-menu{
+    background-color:#071422 ;
 }
