@@ -14,7 +14,7 @@ body
 
 .BoardName
 {
-  color: white;
+  color: var(--text-color);
     text-shadow: 1px 2px 3px rgb(21, 9, 66);
     font-size: 35px;
     transform-style: preserve-3d;
@@ -163,7 +163,7 @@ bottom: 50px;
     width: 70px;
     height: 70px;
     z-index: 21;
-    border-color: rgba(30, 160, 211, 0.637);
+    border-color: var(--color-hover);
 }
 
 
@@ -179,9 +179,9 @@ bottom: 50px;
 }
 
 .navbar-toggler{
-    background-color: #fff !important;
+    background-color: var(--text-color) !important;
     border: 2px solid !important;
 }
 .navbar-light .navbar-toggler {
-    border-color: rgba(17, 239, 255, 0.596);
+    border-color: var(--color-hover);
 }

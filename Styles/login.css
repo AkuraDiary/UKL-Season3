@@ -37,7 +37,7 @@ html,body{
 
 .input-group-prepend span{
     width: 50px;
-    background-color: #2d0d86;
+    background-color: #401ba7;
     color: black;
     border:0 !important;
 }
@@ -59,14 +59,14 @@ input:focus{
 }
 
 .login_btn{
-    color: #8112ff;
+    color: var(--login-button-active-color);
     background-color: whitesmoke;
     width: 100px;
 }
 
 .login_btn:hover{
     color: whitesmoke;
-    background-color: #8112ff;
+    background-color: var(--login-button-active-color);
 }
 
 .links{
@@ -75,6 +75,6 @@ input:focus{
 
 .links a{
     margin-left: 4px;
-    color: #8112ff;
+    color: var(--lunatic-color);
     text-decoration: none;
 }

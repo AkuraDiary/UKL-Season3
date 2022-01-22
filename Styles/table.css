@@ -1,4 +1,4 @@
-/* Amburadul css by panca edited by seta*/
+/* Amburadul css by AkuraDiary*/
 @import url("themes.css");
 body{
     background-color: var(--main-bg-color) !important;
@@ -12,15 +12,15 @@ body{
 
 .all-table h2{
     margin: 20px;
-    color: white;
+    color: var(--text-color);
 }
 .all-table h3{
     /* make text h3 centered */
     text-align: center;
-    color: #fff;
+    color: var(--text-color);
     font-size: 30px;
     font-weight: bold;
-    text-shadow: 1px 1px 1px #7e7e7e;; 
+    text-shadow: 1px 1px 1px #7e7e7e; 
     /* make text capital css    */
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -33,20 +33,20 @@ body{
     text-transform: uppercase;    
 }
 .all-table a:hover{
-    color: rgb(79, 249, 255) !important;
+    color:var(--color-hover) !important;
     text-decoration: none;
 }
 .all-table button{
     /* make the button at the right */
-    color: #fff;
+    color: var(--text-color);
     border-color: #7e7e7e;;
     margin: 15px 20px 15px 20px;
 }
 
 .all-table button:hover{
-    color: aqua;
-    border-color: #14a9ff;
-    background-color:rgba(1, 1, 1, 0) !important;
+    color: var(--color-hover);
+    border-color: var(--color-hover);
+    background-color:transparent !important;
 }
 
 .table-number{
@@ -64,7 +64,7 @@ body{
     max-width: 90% !important;
     border-width: 2px !important;
     border-radius: 0.25rem !important;
-    border-color: #14a9ff;
+    border-color: var(--color-hover);
     border-width: 4px;
 
 }
