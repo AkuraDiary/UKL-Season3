@@ -51,9 +51,11 @@ if(isset($_POST['simpan'])){
     $angkatan = $_POST['angkatan'];
     $simpan = mysqli_query($connect, "INSERT INTO kelas VALUES(NULL, '$nama', '$kk', $angkatan)");
         if($simpan){
-            header("location: kelas.php");
+            echo "<script>alert('Data Berhasil Ditambahkan !');location.href='kelas.php';</script>";
         }else{
-            echo "<script>alert('Data sudah ada');</script>";
+            $error = mysqli_error($connect);
+            echo $error;
+            echo "<script>alert('Data gagal disimpan : '$error' !');location.href='tambah_siswa.php'</script>";
         }
 }
 ?>

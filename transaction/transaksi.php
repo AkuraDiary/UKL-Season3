@@ -63,7 +63,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
 <?php
 // Jika jumlah bayar sesuai dengan yang harus dibayar maka Status LUNAS
 if($r['jumlah_bayar'] == $r['nominal']){ ?>
-                <font style="color: darkgreen; font-weight: bold;">LUNAS</font>
+                <font style="color: green; font-weight: bold;">LUNAS</font>
 <?php }else{ ?>                             BELUM LUNAS <?php } ?> </td>
             <td>
 <?php
@@ -76,9 +76,11 @@ if($r['jumlah_bayar'] == $r['nominal']){ echo "-";
 <?php $no++; } ?>
     </table>
 <!-- Tampilkan tombol halaman -->
+<div class="table-number">
 <?php for($i=1; $i <= $totalHalaman; $i++): ?>
         <a href="?hal=<?= $i; ?>"><?= $i; ?></a>
 <?php endfor; ?>
+</div>
 <!-- Selesai -->
     </div>
     <?php 

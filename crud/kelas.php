@@ -71,7 +71,7 @@ if(isset($_GET['hapus'])){
     $id = $_GET['id'];
     $hapus = mysqli_query($connect, "DELETE FROM kelas WHERE id_kelas='$id'");
     if($hapus){
-        header("location: kelas.php");
+        echo "<script>alert('Data Berhasil Dihapus !');location.href='kelas.php';</script>";
     }else{
         echo "<script>alert('Maaf, data tersebut masih terhubung dengan data yang lain');
         </script>";
