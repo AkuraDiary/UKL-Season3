@@ -1,12 +1,12 @@
 /* Amburadul css by panca edited by seta*/
-
+@import url("themes.css");
 body{
-    background-color: #020508 !important;
+    background-color: var(--main-bg-color) !important;
 }
 
 .all-table{
     /*background-image: url(/Assets/index_wallpaper.jpg);*/
-    background-color: #020508 !important;
+    background-color: var(--main-bg-color) !important;
     border-radius: 0.25rem !important;
 }
 

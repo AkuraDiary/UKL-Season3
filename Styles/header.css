@@ -1,4 +1,5 @@
 /* Amburadul css in collaboration of PanGami and AkuraDiary*/
+@import url("themes.css");
 nav a{
     color: #fff !important;
     text-decoration: none;
@@ -11,7 +12,7 @@ nav a{
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 0 1px 1px #020508; /*rgba(0,0,0,.2);*/
+    text-shadow: 0 1px 1px var(--dropdown-bg-color); /*rgba(0,0,0,.2);*/
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -22,8 +23,8 @@ nav{
     width: 100%;
     height: auto;
     border-radius: 0 !important;
-    color: #020508 ;/*rgb(2,5,8);*/ 
-    background-color: #020508 !important;/*rgb(2,5,8) !important;*/
+    color: var(--main-bg-color) ;/*rgb(2,5,8);*/ 
+    background-color: var(--main-bg-color) !important;/*rgb(2,5,8) !important;*/
     transition: all .3s;
 }
 nav a:hover{
@@ -48,8 +49,8 @@ nav a:hover{
     color: rgb(0, 238, 255) !important;
 }
 .logout:hover{
-    background-color: #020508 !important;
-    color: tomato !important;
+    background-color: var(--transparent--color) !important;
+    color: var(--allert-color) !important;
 }
 
 .usrname {
@@ -69,5 +70,5 @@ nav a:hover{
     color: #14efff !important;
 }
 .dropdown-menu{
-    background-color:#071422 ;
+    background-color:var(--dropdown-bg-color) ;
 }

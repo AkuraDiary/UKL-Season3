@@ -1,5 +1,5 @@
 
-
+@import url("themes.css");
 html,body{
     background-image: url('/mengukl/Assets/wallpaper.png');
     background-size: cover;
@@ -23,17 +23,6 @@ html,body{
     margin-bottom: auto;
     width: 400px;
     background-color: rgba(0,0,0,0.5) !important;
-}
-
-.social_icon span{
-    font-size: 60px;
-    margin-left: 10px;
-    color: blueviolet;
-}
-
-.social_icon span:hover{
-    color: white;
-    cursor: pointer;
 }
 
 .card-header h2{
@@ -86,6 +75,6 @@ input:focus{
 
 .links a{
     margin-left: 4px;
-    color: #9034fa;
+    color: #8112ff;
     text-decoration: none;
 }

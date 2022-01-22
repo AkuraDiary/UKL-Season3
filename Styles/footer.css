@@ -1,7 +1,7 @@
 /* Amburadul css by AkuraDiary*/
-
+@import url("themes.css");
 .footer-section {
-  background: #020508;
+  background: var(--main-bg-color);
   position: sticky;
   width: 100%;
   bottom: 0;
@@ -10,7 +10,7 @@
   text-decoration: none !important;
 }
 .copyright-area{
-  background: #020508;
+  background: var(--main-bg-color);
   padding: 25px 0;
 }
 .copyright-text p {
