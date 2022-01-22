@@ -30,7 +30,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     <li class="nav-item ml-auto">
-        <a class="nav-link usrname" href="#"> <?php echo $hasil['username']; ?></a>
+        <a class="nav-link usrname" href="/mengukl/index.php"> <?php echo $hasil['username']; ?></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link nav-link-active" href="/mengukl/index.php">Home</a>

@@ -56,7 +56,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
             <td><?= $no ?></td>
             <td><?= $r['nama_petugas']; ?></td>
             <td><?= $r['nama']; ?></td>
-            <td><?= $r['tgl_bayar'] . "/" . $r['bulan_dibayar'] . "/" . $r['tahun_dibayar']; ?></td>
+            <td><?= $r['tgl_bayar'] . "/" . $r['bulan_spp'] . "/" . $r['tahun_spp']; ?></td>
             <td><?= $r['tahun'] . " | Rp. " . $r['nominal']; ?></td>
             <td><?= $r['jumlah_bayar']; ?></td>
             <td>
@@ -96,9 +96,9 @@ if(isset($_GET['lunas'])){
     $row = mysqli_fetch_assoc($ambilData);
     $sisa = $row['nominal'] - $row['jumlah_bayar'];
     $hasil = $row['jumlah_bayar'] + $sisa;
-    $update = mysqli_query($db, "UPDATE pembayaran SET jumlah_bayar='$hasil' WHERE id_pembayaran='$id'");
+    $update = mysqli_query($connect, "UPDATE pembayaran SET jumlah_bayar='$hasil' WHERE id_pembayaran='$id'");
     if($update){
-        header("location: transaksi.php");
+        echo "<script>alert('Data Berhasil Ditambahkan !');location.href='../transaction/transaksi.php';</script>";
     }
 }
 ?>

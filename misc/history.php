@@ -87,8 +87,8 @@ $no=1;
 while($r_trx = mysqli_fetch_assoc($historyPembayaran)){ ?>
             <tr>
                 <td><?= $no; ?></td>
-                <td><?= $r_trx['tgl_bayar'] . " " . $r_trx['bulan_dibayar'] . " " .
-                        $r_trx['tahun_dibayar']; ?></td>
+                <td><?= $r_trx['tgl_bayar'] . "/" . $r_trx['bulan_spp'] . "/" .
+                        $r_trx['tahun_spp']; ?></td>
                 <td><?= $r_trx['nama_petugas']; ?></td>
                 <td><?= $r_trx['tahun'] . " | Rp. " . $r_trx['nominal']; ?></td>
                 <td><?= "Rp. " . $r_trx['jumlah_bayar']; ?></td>
