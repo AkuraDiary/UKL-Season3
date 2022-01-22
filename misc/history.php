@@ -94,9 +94,9 @@ while($r_trx = mysqli_fetch_assoc($historyPembayaran)){ ?>
                 <td><?= "Rp. " . $r_trx['jumlah_bayar']; ?></td>
 <?php
 if($r_trx['jumlah_bayar'] == $r_trx['nominal']){ ?>
-                <td><font style="color: darkgreen; font-weight: bold;">LUNAS</font></td>
+                <td><font style="color: aqua; font-weight: bold;">LUNAS</font></td>
                 <td>-</td>
-<?php }else{ ?> <td>BELUM LUNAS</td>
+<?php }else{ ?> <td><font style="color: violet; font-weight: bold;">BELUM LUNAS</font></td>
                 <td><a href="transaksi.php?lunas&id=<?= $r_trx['id_pembayaran']; ?>">
                 BAYAR LUNAS</a></td>
 <?php } ?>
