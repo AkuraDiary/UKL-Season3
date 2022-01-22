@@ -65,7 +65,6 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
 </div>
 </div>
 <!-- Selesai -->
-    <hr />
     <?php 
     $footerpath = $_SERVER['DOCUMENT_ROOT'];
     $footerpath .= "/mengukl/misc/footer.php"; 

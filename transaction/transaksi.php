@@ -1,5 +1,8 @@
 <?php
 require_once("../misc/require.php");
+$connectpath = $_SERVER['DOCUMENT_ROOT'];
+    $connectpath .= "/mengukl/utils/connect.php";
+    include($connectpath);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +14,7 @@ require_once("../misc/require.php");
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+        <link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
     <title>Entry Transaksi</title>
 </head>
@@ -19,9 +22,10 @@ require_once("../misc/require.php");
     <!-- Panggil script header -->
     <?php require_once("../misc/header.php"); ?>
     <!-- Isi Konten -->
+    <div class="all-table">
     <h3>Transaksi</h3>
-    <p><a href="tambah_transaksi.php">Tambah Data</a></p>
-    <table cellspacing="0" border="1" cellpadding="5">
+    <p><button type="button" class="btn btn-outline-secondary"><a href="/mengukl/crud/tambah_transaksi.php">Tambah Data</a></button></p>
+    <table class="table  table-hover table-dark" cellspacing="1">
         <tr>
             <td>No. </td>
             <td>Nama Petugas</td>
@@ -34,14 +38,14 @@ require_once("../misc/require.php");
         </tr>
 <?php
 $totalDataHalaman = 5;
-$data = mysqli_query($db, "SELECT * FROM pembayaran");
+$data = mysqli_query($connect, "SELECT * FROM pembayaran");
 $hitung = mysqli_num_rows($data);
 $totalHalaman = ceil($hitung / $totalDataHalaman);
 $halAktif = (isset($_GET['hal'])) ? $_GET['hal'] : 1;
 $dataAwal = ($totalDataHalaman * $halAktif) - $totalDataHalaman;
 // Kita panggil tabel pembayaran
 // Setelah kita panggil, JOIN tabel yang ter relasi ke tabel pembayaran
-$sql = mysqli_query($db, "SELECT * FROM pembayaran
+$sql = mysqli_query($connect, "SELECT * FROM pembayaran
 JOIN petugas ON pembayaran.id_petugas = petugas.id_petugas 
 JOIN siswa ON pembayaran.nisn = siswa.nisn
 JOIN spp ON pembayaran.id_spp = spp.id_spp
@@ -76,15 +80,18 @@ if($r['jumlah_bayar'] == $r['nominal']){ echo "-";
         <a href="?hal=<?= $i; ?>"><?= $i; ?></a>
 <?php endfor; ?>
 <!-- Selesai -->
-    <hr />
-    <?php require_once("footer.php"); ?>
+    </div>
+    <?php 
+    $footerpath = $_SERVER['DOCUMENT_ROOT'];
+    $footerpath .= "/mengukl/misc/footer.php"; 
+    require($footerpath); ?>
 </body>
 </html>
 <?php
 // Ada siswa yang ingin membayar sisa pembayaran
 if(isset($_GET['lunas'])){
     $id = $_GET['id'];
-    $ambilData = mysqli_query($db, "SELECT * FROM pembayaran JOIN spp ON pembayaran.id_spp=spp.id_spp 
+    $ambilData = mysqli_query($connect, "SELECT * FROM pembayaran JOIN spp ON pembayaran.id_spp=spp.id_spp 
                                     WHERE id_pembayaran = '$id'");
     $row = mysqli_fetch_assoc($ambilData);
     $sisa = $row['nominal'] - $row['jumlah_bayar'];
