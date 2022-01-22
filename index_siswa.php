@@ -34,7 +34,7 @@ ORDER BY tgl_bayar");
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
-    <title>Halaman Utama</title>
+    <title>Siswa Home</title>
 </head>
 <body>
 <div class="all-table"> 

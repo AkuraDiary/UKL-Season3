@@ -13,7 +13,7 @@ require "../utils/connect.php";
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
-    <title>CRUD Data Kelas</title>
+    <title>Data Kelas</title>
 </head>
 <body>
     <!-- Panggil script header -->

@@ -15,7 +15,7 @@ require "../utils/connect.php";
         
 <link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
-    <title>CRUD Data Siswa</title>
+    <title>Data Siswa</title>
 </head>
 <body>
     <!-- Panggil script header -->

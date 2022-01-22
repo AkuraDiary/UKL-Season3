@@ -16,7 +16,7 @@ require($path);
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
-    <title>CRUD Data Kelas</title>
+    <title>Data Kelas</title>
 </head>
 <body>
     <!-- Panggil script header -->
