@@ -19,11 +19,10 @@ nav a{
     transition: all .3s ease-in-out !important;
 }
 nav{
-
+    width: 100%;
     height: auto;
     border-radius: 0 !important;
     color: #020508 ;/*rgb(2,5,8);*/ 
-    
     background-color: #020508 !important;/*rgb(2,5,8) !important;*/
     transition: all .3s;
 }
@@ -53,15 +52,20 @@ nav a:hover{
     color: tomato !important;
 }
 
-.navbar-text h3{
+.usrname {
+    text-transform: unset;
     color: #fff !important;
     font-size: 2vw;
     font-weight: bold;
     letter-spacing: 1px;
     align-self: reverse;
+    display: block;
+    text-decoration: none;
 }
-
-.navbar-text h3:hover{
+.navbar{
+    margin-bottom: 0 !important;
+}
+.usrname:hover{
     color: #14efff !important;
 }
 .dropdown-menu{

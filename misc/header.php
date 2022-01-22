@@ -29,12 +29,15 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <?php
-      if($hasil['level'] == "admin"){ 
-      ?>
+    <li class="nav-item ml-auto">
+        <a class="nav-link usrname" href="#"> <?php echo $hasil['username']; ?></a>
+      </li>
       <li class="nav-item active">
         <a class="nav-link nav-link-active" href="/mengukl/index.php">Home</a>
       </li>
+      <?php
+      if($hasil['level'] == "admin"){ 
+      ?>
 
       <li class="nav-Item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSis" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,16 +62,9 @@
 
       <li class="nav-item">
         <a class="nav-link" href="/mengukl/crud/petugas.php">Data Petugas</a> 
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link logout" href="/mengukl/login-logout/logout.php">LogOut</a>
-      </li>    
+      </li> 
       <?php
         }else { ?>
-      <li class="nav-item active">
-        <a class="nav-link nav-link-active" href="/mengukl/index.php">Home</a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="/mengukl/transaction/transaksi.php">Transaksi</a>
@@ -76,16 +72,13 @@
 
       <li class="nav-item">
         <a class="nav-link" href="/mengukl/misc/history.php">History Pembayaran</a>
-      </li>
-
-      <li class="nav-item">
+      </li>      
+    <?php } ?>
+    <li class="nav-item">
         <a class="nav-link logout" href="/mengukl/login-logout/logout.php">LogOut</a>
       </li>
-    <?php } ?>
     </ul>
-    <span class="navbar-text">
-      <h3> <?php echo $hasil['username']; ?></h3>
-    </span>
+    
   </div>
 </nav>
 </html>

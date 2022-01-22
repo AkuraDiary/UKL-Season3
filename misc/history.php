@@ -70,7 +70,7 @@ if(isset($_POST['cari'])){
                 <td><?= $r_siswa['nama_kelas'] . " | " . $r_siswa['jurusan']; ?></td>
             </tr>
         </table>
-        <hr />
+
         <!-- Sekarang kita tampilkan history pembayarannya -->
         <table class="table table-hover table-dark" cellpadding="5" cellspacing="0" >
             <tr>
