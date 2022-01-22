@@ -85,7 +85,7 @@ while($r = mysqli_fetch_assoc($pembayaran)){ ?>
         <tr>
             <td><?= $no; ?></td>
             <td><?= $r['nama_petugas']; ?></td>
-            <td><?= $r['tgl_bayar'] . "/" . $r['bulan_dibayar'] . "/" . $r['tahun_dibayar']; ?></td>
+            <td><?= $r['tgl_bayar'] . "/" . $r['bulan_spp'] . "/" . $r['tahun_spp']; ?></td>
             <td><?= $r['tahun'] . " | Rp. " . $r['nominal']; ?></td>
             <td><?= $r['jumlah_bayar']; ?></td>
             <td>
