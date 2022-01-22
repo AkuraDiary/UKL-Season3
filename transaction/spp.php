@@ -52,7 +52,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
             <td><?= $r['id_spp']; ?></td>
             <td><?= "Rp. " . $r['nominal']; ?></td>
             <td><a href="?hapus&id=<?= $r['id_spp']; ?>">Hapus</a> | 
-                <a href="edit_spp.php?id=<?= $r['id_spp']; ?>">Edit</a</td>
+                <a href="/mengukl/crud/edit_spp.php?id=<?= $r['id_spp']; ?>">Edit</a</td>
         </tr>
 <?php $no++; } ?>
     </table>
