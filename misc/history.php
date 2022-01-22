@@ -1,5 +1,6 @@
 <?php
 require_once("../misc/require.php");
+require "../utils/connect.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,18 +12,21 @@ require_once("../misc/require.php");
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+        <link rel="stylesheet" type="text/css" href="/mengukl/Styles/history.css">
+        <link rel="stylesheet" type="text/css" href="/mengukl/Styles/table.css">
     <meta charset="UTF-8">
     <title>History Pembayaran</title>
 </head>
 <body>
     <!-- Panggil header -->
     <?php require_once("../misc/header.php"); ?>
+
+    <div class="all-table">
     <!-- Konten -->
     <h3>History Pembayaran Siswa</h3>
-    <form action="" method="POST" autocomplete="off">
-        Cari Siswa <input type="text" name="nisn" placeholder="Cari berdasarkan NISN" autofocus>
-        <button type="submit" name="cari">Cari</button>
+
+    <form class="formnya-history" action="" method="POST" autocomplete="off">
+        <h3>Cari Siswa</h3> <input type="text" name="nisn" placeholder="Cari berdasarkan NISN"> <button class="btn btn-outline-secondary" type="submit" name="cari">Cari</button>
     </form>
 
 <?php
@@ -30,21 +34,21 @@ require_once("../misc/require.php");
 if(isset($_POST['cari'])){
     $nisn = $_POST['nisn'];
     // Kita panggil table siswa
-    $biodataSiswa = mysqli_query($db, "SELECT * FROM siswa 
+    $biodataSiswa = mysqli_query($connect, "SELECT * FROM siswa 
                     JOIN kelas ON siswa.id_kelas=kelas.id_kelas 
                     WHERE nisn='$nisn'");
     // Table pembayaran wajib kita panggil
-    $historyPembayaran = mysqli_query($db, "SELECT * FROM pembayaran
+    $historyPembayaran = mysqli_query($connect, "SELECT * FROM pembayaran
                          JOIN petugas ON pembayaran.id_petugas=petugas.id_petugas
                          JOIN spp ON pembayaran.id_spp=spp.id_spp
                          WHERE nisn='$nisn'
                          ORDER BY tgl_bayar");
     $r_siswa = mysqli_fetch_assoc($biodataSiswa);
 ?>
-    <hr />
     <!-- Kita tampilkan Biodata Siswa -->
         <h3>Biodata Siswa</h3>
-        <table cellpadding="5">
+        <table class="table table-hover table-dark" cellpadding="5">
+    
             <tr>
                 <td>NISN</td>
                 <td>:</td>
@@ -68,7 +72,7 @@ if(isset($_POST['cari'])){
         </table>
         <hr />
         <!-- Sekarang kita tampilkan history pembayarannya -->
-        <table cellpadding="5" cellspacing="0" border="1">
+        <table class="table table-hover table-dark" cellpadding="5" cellspacing="0" >
             <tr>
                 <td>No. </td>
                 <td>Tanggal Pembayaran</td>
@@ -100,7 +104,8 @@ if($r_trx['jumlah_bayar'] == $r_trx['nominal']){ ?>
 <?php $no++; }?>
         </table>
 <?php } ?>
-    <hr />
+</div>
+<br>
     <!-- Panggil footer -->
     <?php require_once("footer.php"); ?>
 </body>

@@ -40,8 +40,7 @@ body{
     /* make the button at the right */
     color: #fff;
     border-color: #7e7e7e;;
-    margin-top: 15px;
-    margin-left: 20px;
+    margin: 15px 20px 15px 20px;
 }
 
 .all-table button:hover{
@@ -56,6 +55,7 @@ body{
     text-align: center;
     font-size: 15px;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .table{
