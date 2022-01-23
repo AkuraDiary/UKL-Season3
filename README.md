@@ -15,7 +15,7 @@
 
 > # History Pembayaran
 ![ssan](https://github.com/AkuraDiary/imagess/blob/main/ssan5.png)
-![ssan]https://github.com/AkuraDiary/imagess/blob/main/ssan5%2C5.png)
+![ssan](https://github.com/AkuraDiary/imagess/blob/main/ssan5%2C5.png)
 
 Styles and Css inspired by [this guy](https://github.com/PanGami)
 Back End inspired by [this guy](https://jaringscript.blogspot.com/2020/03/bagian-01-pembahasan-soal-ukk-spp.html)
