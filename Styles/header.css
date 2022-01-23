@@ -28,7 +28,7 @@ nav{
     transition: all .3s;
 }
 nav a:hover{
-    color: var(--color-hover) !important;    
+    color: var(--header-hover-color) !important;    
     background-color: transparent !important;
     -webkit-transform: translateY(-3px);
     -moz-transform: translateY(-3px);
@@ -41,12 +41,12 @@ nav a:hover{
     background-color: transparent !important;
     margin-top: 7px !important;
     padding-right: 10px;
-    border-right: var(--color-hover) solid 3px;
+    border-right: var(--header-hover-color) solid 3px;
     border-radius: 50%;
 }
 .navbar-brand:hover{
     background-color: transparent !important;
-    color: var(--color-hover) !important;
+    color: var(--header-hover-color) !important;
 }
 .logout:hover{
     background-color: var(--transparent--color) !important;
@@ -67,7 +67,7 @@ nav a:hover{
     margin-bottom: 0 !important;
 }
 .usrname:hover{
-    color: var(--color-hover) !important;
+    color: var(--header-hover-color) !important;
 }
 .dropdown-menu{
     background-color:var(--dropdown-bg-color) ;
