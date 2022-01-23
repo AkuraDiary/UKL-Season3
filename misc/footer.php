@@ -1,4 +1,3 @@
-<!-- ADMIN DAPAT MENGAKSES SEMUANYA -->
 <html>
     <head>        
         <link rel="stylesheet" type="text/css" href="/mengukl/Styles/footer.css">        
@@ -9,7 +8,8 @@
             <div class="container">
                 <div class="text-center">
                     <div class="copyright-text">
-                        <p>Copyright &copy; 2022, All Right Reserved. Amburadul Template : Lunatic Midnight by <a href="https://github.com/AkuraDiary">AkuraDiary</a></p>
+                        <p>Copyright &copy; 2022, All Right Reserved. 
+                            <p> Amburadul Template : Lunatic Midnight by <a href="https://github.com/AkuraDiary">AkuraDiary</a></p></p>
                     </div>
                 </div>                    
             </div>
