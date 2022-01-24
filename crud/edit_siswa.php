@@ -77,7 +77,7 @@ if(isset($_POST['simpan'])){
     $kelas = $_POST['kelas'];
     $alamat = $_POST['alamat'];
     $no = $_POST['no'];
-    $update = mysqli_query($db, "UPDATE siswa SET nama='$nama',
+    $update = mysqli_query($connect, "UPDATE siswa SET nama='$nama',
                                  id_kelas='$kelas', alamat='$alamat', no_tlp='$no' 
                                  WHERE siswa.nisn='$nisn'");
         if($update){
