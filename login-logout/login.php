@@ -22,11 +22,6 @@ if(isset($_SESSION['username'])){
 			<div class="card">
 				<div class="card-header">
 					<h2>Login Petugas</h2>
-					<!--<div class="d-flex justify-content-end social_icon">
-						<span><i class="fab fa-facebook-square"></i></span>
-						<span><i class="fab fa-google-plus-square"></i></span>
-						<span><i class="fab fa-twitter-square"></i></span>
-					</div>-->
 				</div>
 				<div class="card-body">
 					<form action="/mengukl/login-logout/proseslogin.php" method="POST">
