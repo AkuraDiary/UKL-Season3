@@ -38,7 +38,7 @@ while($row = mysqli_fetch_assoc($siswa)){?>
                 <div class="select">
                 <td><select class="custom-select" name="kelas">
 <?php
-$kelas = mysqli_query($db, "SELECT * FROM kelas");
+$kelas = mysqli_query($connect, "SELECT * FROM kelas");
 while($r = mysqli_fetch_assoc($kelas)){ ?>
                         <option value="<?= $r['id_kelas']; ?>"><?= $r['nama_kelas'] . " | " 
                     . $r['jurusan']; ?></option>
