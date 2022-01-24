@@ -63,7 +63,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
 <?php
 // Jika jumlah bayar sesuai dengan yang harus dibayar maka Status LUNAS
 if($r['jumlah_bayar'] == $r['nominal']){ ?>
-                <font style="color: green; font-weight: bold;">LUNAS</font>
+                <font style="color: aqua; font-weight: bold;">LUNAS</font>
 <?php }else{ ?>                           <font style="color: tomato; font-weight: bold;">  BELUM LUNAS </font> <?php } ?> </td>
             <td>
 <?php
