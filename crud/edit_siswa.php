@@ -56,6 +56,10 @@ while($r = mysqli_fetch_assoc($kelas)){ ?>
                 <td><input type="tel" class="form-control" name="no" value="<?= $row['no_tlp']; ?>"></td>
             </tr>
             <tr>
+                <td>ID SPP :</td>
+                <td><input type="text" class="form-control" name="idspp" value="<?= $row['id_spp']; ?>"></td>
+            </tr>
+            <tr>
                 <td colspan="2">
                 <button class="btn btn-outline-secondary" onclick="history.back()" type="button">Kembali</button>
                     <button class="btn btn-outline-secondary" type="submit" name="simpan">Simpan</button>
@@ -80,13 +84,16 @@ if(isset($_POST['simpan'])){
     $kelas = $_POST['kelas'];
     $alamat = $_POST['alamat'];
     $no = $_POST['no'];
+    $idspp = $_POST['idspp'];
     $update = mysqli_query($connect, "UPDATE siswa SET nama='$nama',
-                                 id_kelas='$kelas', alamat='$alamat', no_tlp='$no' 
-                                 WHERE siswa.nisn='$nisn'");
+                                 id_kelas='$kelas', alamat='$alamat', no_tlp='$no' , id_spp=$idspp
+                                 WHERE nisn='$nisn'");
         if($update){
-            header("location: siswa.php");
+            echo "<script>alert('Data Berhasil Diedit !');location.href='siswa.php';</script>";
         }else{
-            echo "<script>alert('Gagal'); </script>";
+            $error = mysqli_error($connect);
+            echo $error;
+            echo "<script>alert('Data gagal disimpan : '$error' !');location.href='edit_siswa.php'</script>";
         }
 }
 ?>
