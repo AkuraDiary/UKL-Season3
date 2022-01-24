@@ -36,13 +36,16 @@ while($row = mysqli_fetch_assoc($siswa)){?>
             <tr>
                 <td>Kelas :</td>
                 <div class="select">
-                <td><select class="custom-select" name="kelas">
+                <td>
+                    <select class="custom-select" name="kelas">
 <?php
 $kelas = mysqli_query($connect, "SELECT * FROM kelas");
 while($r = mysqli_fetch_assoc($kelas)){ ?>
                         <option value="<?= $r['id_kelas']; ?>"><?= $r['nama_kelas'] . " | " 
                     . $r['jurusan']; ?></option>
-<?php } ?>          </select></div></td>
+<?php } ?>          </select>
+</div>
+</td>
             </tr>
             <tr>
                 <td>Alamat :</td>

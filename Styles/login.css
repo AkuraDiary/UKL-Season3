@@ -22,7 +22,7 @@ html,body{
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(2, 5, 8, 0.8)!important;
+    background-color: rgba(27, 3, 31, 0.8)!important;
 }
 
 .card-header h2{
@@ -37,7 +37,7 @@ html,body{
 
 .input-group-prepend span{
     width: 50px;
-    background-color: #401ba7;
+    background-color: var(--login-button-active-color);
     color: black;
     border:0 !important;
 }
