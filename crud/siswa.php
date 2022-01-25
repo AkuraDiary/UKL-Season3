@@ -1,6 +1,9 @@
 <?php
 require_once("../misc/require.php");
 require "../utils/connect.php";
+if($_SESSION['level']!="admin"){
+    header("location: ./../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +36,7 @@ require "../utils/connect.php";
             <td>Kelas</td>
             <td>Alamat</td>
             <td>No. Telp</td>
+            <td>Nominal SPP</td>
             <td>Aksi</td>
         </tr>
 <?php
@@ -49,8 +53,9 @@ $dataAwal = ($totalDataHalaman * $halAktif) - $totalDataHalaman;
 // Konfigurasi Selesai
 // Kita panggil tabel siswa
 // Setelah kita panggil, JOIN tabel yang ter relasi ke tabel siswa
-$sql = mysqli_query($connect, "SELECT * FROM siswa
-JOIN kelas ON siswa.id_kelas = kelas.id_kelas
+$sql = mysqli_query($connect, "SELECT * FROM siswa, kelas, spp 
+WHERE siswa.id_kelas = kelas.id_kelas 
+AND siswa.id_spp = spp.id_spp 
 ORDER BY nama LIMIT $dataAwal, $totalDataHalaman ");
 $no = 1;
 while($r = mysqli_fetch_assoc($sql)){ ?>
@@ -62,6 +67,7 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
             <td><?= $r['nama_kelas'] . " | " . $r['jurusan']; ?></td>
             <td><?= $r['alamat']; ?></td>
             <td><?= $r['no_tlp']; ?></td>
+            <td><?= $r['nominal']; ?></td>
             <td><a href="?hapus&nisn=<?= $r['nisn']; ?>">Hapus</a> | 
                 <a href="edit_siswa.php?nisn=<?= $r['nisn']; ?>">Edit</a</td>
         </tr>

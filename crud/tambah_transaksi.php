@@ -3,6 +3,9 @@ require_once("../misc/require.php");
 $connectpath = $_SERVER['DOCUMENT_ROOT'];
     $connectpath .= "/mengukl/utils/connect.php";
     include($connectpath);
+    if($_SESSION['level']!="admin"){
+        header("location: ./../index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

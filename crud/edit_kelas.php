@@ -1,6 +1,9 @@
 <?php
 require_once("../misc/require.php");
 require "../utils/connect.php";
+if($_SESSION['level']!="admin"){
+    header("location: ./../index.php");
+}
 $id = $_GET['id'];
 $kelas = mysqli_query($connect, "SELECT * FROM kelas WHERE id_kelas='$id'");
 ?>

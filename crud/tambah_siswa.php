@@ -1,5 +1,8 @@
 <?php
 require_once("../misc/require.php");
+if($_SESSION['level']!="admin"){
+    header("location: ./../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,8 +56,19 @@ require_once("../misc/require.php");
                 <td><input class="form-control" type="text" name="no"></td>
             </tr>
             <tr>
-                <td>Id SPP :</td>
-                <td><input class="form-control" type="number" name="spp"></td>
+            <td>Id SPP :</td>
+                <td>
+                <div class="select">
+                    <select class="custom-select" id="inlineFormCustomSelectPref" name="spp">
+                        <?php
+                        $kelas = mysqli_query($connect, "SELECT * FROM kelas");
+                        while($r = mysqli_fetch_assoc($kelas)){ ?>
+                            <option value="<?= $r['id_spp']; ?>"><?= $r['id_spp'] ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                </td>
+       
             </tr>
             <tr>
                 <td colspan="2">

@@ -2,6 +2,9 @@
 require_once("../misc/require.php");
 $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/mengukl/utils/connect.php";
+if($_SESSION['level']!="admin"){
+    header("location: ./../index.php");
+}
 require($path);
 
 $id = $_GET['id'];

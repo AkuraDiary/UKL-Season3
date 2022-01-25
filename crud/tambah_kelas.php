@@ -1,6 +1,9 @@
 <?php
 require_once("../misc/require.php");
 require "../utils/connect.php";
+if($_SESSION['level']!="admin"){
+    header("location: ./../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +49,7 @@ require "../utils/connect.php";
 <?php
 // Proses Simpan
 if(isset($_POST['simpan'])){
+    
     $nama = $_POST['nama'];
     $kk = $_POST['kk'];
     $angkatan = $_POST['angkatan'];

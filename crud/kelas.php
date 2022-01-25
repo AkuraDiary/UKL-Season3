@@ -1,6 +1,9 @@
 <?php
 require_once("../misc/require.php");
 require "../utils/connect.php";
+if($_SESSION['level']!="admin"){
+    header("location: ./../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
