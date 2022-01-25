@@ -61,8 +61,8 @@ if($_SESSION['level']!="admin"){
                 <div class="select">
                     <select class="custom-select" id="inlineFormCustomSelectPref" name="spp">
                         <?php
-                        $kelas = mysqli_query($connect, "SELECT * FROM kelas");
-                        while($r = mysqli_fetch_assoc($kelas)){ ?>
+                        $tblspp = mysqli_query($connect, "SELECT * FROM spp");
+                        while($r = mysqli_fetch_assoc($tblspp)){ ?>
                             <option value="<?= $r['id_spp']; ?>"><?= $r['id_spp'] ?></option>
                         <?php } ?>
                     </select>
