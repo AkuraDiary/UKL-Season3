@@ -35,6 +35,7 @@ $connectpath = $_SERVER['DOCUMENT_ROOT'];
             <td>Jumlah yang dibayar</td>
             <td>Status</td>
             <td>Aksi</td>
+            <td>Sisa Pembayaran</td>
         </tr>
 <?php
 $totalDataHalaman = 5;
@@ -64,14 +65,26 @@ while($r = mysqli_fetch_assoc($sql)){ ?>
 // Jika jumlah bayar sesuai dengan yang harus dibayar maka Status LUNAS
 if($r['jumlah_bayar'] == $r['nominal']){ ?>
                 <font style="color: aqua; font-weight: bold;">LUNAS</font>
-<?php }else{ ?>                           <font style="color: tomato; font-weight: bold;">  BELUM LUNAS </font> <?php } ?> </td>
-            <td>
+<?php }else{ ?>                           <font style="color: tomato; font-weight: bold;">  BELUM LUNAS </font> <?php } ?> 
+</td>
+
+
+<td>
 <?php
+// button bayar lunas
 // Jika siswa ingin membayar lunas sisa pembayaran
 if($r['jumlah_bayar'] == $r['nominal']){ echo "-";
 }else{ ?>
     <a href="?lunas&id=<?= $r['id_pembayaran']; ?>">BAYAR LUNAS</a>
-<?php } ?>  </td>
+<?php } 
+$sisa = $row['nominal'] - $row['jumlah_bayar'];
+// button bayar lunas?> 
+</td>
+
+<td>
+    <?= $sisa; //tampilken sisa pembayaran ?>
+</td>
+
         </tr>
 <?php $no++; } ?>
     </table>
@@ -96,7 +109,6 @@ if(isset($_GET['lunas'])){
     $ambilData = mysqli_query($connect, "SELECT * FROM pembayaran JOIN spp ON pembayaran.id_spp=spp.id_spp 
                                     WHERE id_pembayaran = '$id'");
     $row = mysqli_fetch_assoc($ambilData);
-    $sisa = $row['nominal'] - $row['jumlah_bayar'];
     $hasil = $row['jumlah_bayar'] + $sisa;
     $update = mysqli_query($connect, "UPDATE pembayaran SET jumlah_bayar='$hasil' WHERE id_pembayaran='$id'");
     if($update){
